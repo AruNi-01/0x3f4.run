@@ -1,5 +1,5 @@
 {
-  "name": "next-app-template",
+  "name": "0x3f4.run",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -15,6 +15,7 @@
     "@nextui-org/kbd": "2.0.25",
     "@nextui-org/link": "2.0.26",
     "@nextui-org/navbar": "2.0.27",
+    "@nextui-org/react": "^2.2.9",
     "@nextui-org/snippet": "2.0.30",
     "@nextui-org/switch": "2.0.25",
     "@nextui-org/system": "2.0.15",
