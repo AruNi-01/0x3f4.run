@@ -10,24 +10,24 @@ import {
   NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  Avatar,
 } from "@nextui-org/react";
 import NextLink from "next/link";
-import { AcmeLogo } from "./icon/AcmeLogo";
 import { siteConfig } from "@/config/site";
-import {
-  GithubIcon,
-  HeartFilledIcon,
-} from "../icons";
+import { GithubIcon, HeartFilledIcon } from "./icons";
 import { ThemeSwitch } from "./theme-switch";
 
 export const Navbar = () => {
   return (
-    <NextUINavbar shouldHideOnScroll>
+    <NextUINavbar>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <AcmeLogo />
-            <p className="font-bold text-inherit">ACME</p>
+          <NextLink
+            className="flex justify-start items-center gap-5 text-2xl"
+            href="/"
+          >
+            <Avatar isBordered src="/logo.png" size="sm" />
+            <p className="font-bold text-[#71717A]">AarynLu</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>

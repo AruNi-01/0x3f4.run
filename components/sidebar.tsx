@@ -1,22 +1,21 @@
 "use client";
 import React from "react";
 import { Listbox, ListboxItem, ListboxSection, cn } from "@nextui-org/react";
-import { ListboxWrapper } from "./ListboxWrapper";
 import {
   AddNoteIcon,
   CopyDocumentIcon,
   DeleteDocumentIcon,
   EditDocumentIcon,
-} from "../icons";
+} from "./icons";
 
 export default function SideBar() {
   const iconClasses =
     "text-xl text-default-500 pointer-events-none flex-shrink-0";
 
   return (
-    <ListboxWrapper>
-      <Listbox variant="flat" aria-label="Listbox menu with sections">
-        <ListboxSection title="Actions" showDivider>
+    <div className="hidden md:flex flex-col w-1/5 max-w-2xl border-small rounded-small border-default-200 dark:border-default-100">
+      <Listbox className="" variant="flat" aria-label="Listbox menu with sections">
+        <ListboxSection className="" title="Actions" showDivider>
           <ListboxItem
             key="new"
             description="Create a new file"
@@ -39,7 +38,7 @@ export default function SideBar() {
             Edit file
           </ListboxItem>
         </ListboxSection>
-        <ListboxSection title="Danger zone">
+        <ListboxSection className="" title="Danger zone">
           <ListboxItem
             key="delete"
             className="text-danger"
@@ -53,6 +52,6 @@ export default function SideBar() {
           </ListboxItem>
         </ListboxSection>
       </Listbox>
-    </ListboxWrapper>
+    </div>
   );
 }
