@@ -4,7 +4,6 @@ import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import TitleAnimation from "@/components/TitleAnimation";
 import MottoType from "@/components/MottoType";
@@ -13,11 +12,16 @@ export default function Home() {
   return (
     <section className="flex flex-col justify-around w-full items-center gap-4">
       <div className="inline-block w-full text-center justify-center">
-        <TitleAnimation />
+        <div className="hidden lg:block">
+          <TitleAnimation titleText="AarynLu | 0x3f4.run" />
+        </div>
+        <div className="lg:hidden">
+          <TitleAnimation titleText="AarynLu" />
+        </div>
         <br />
-				<h2 className="my-2 text-3xl text-default-500">
-					<MottoType />
-				</h2>
+        <h2 className="my-2 text-3xl text-default-500">
+          <MottoType />
+        </h2>
       </div>
 
       <div className="flex gap-3">

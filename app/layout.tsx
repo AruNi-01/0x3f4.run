@@ -1,12 +1,11 @@
-import "@/styles/globals.css";
-import { Metadata } from "next";
-import { siteConfig } from "@/config/site";
+import Sidebar from "@/components/Sidebar";
+import { MobileNavbar } from "@/components/mobile-navbar";
 import { fontSans } from "@/config/fonts";
-import { Providers } from "./providers";
-import { Navbar } from "@/components/navbar";
+import { siteConfig } from "@/config/site";
+import "@/styles/globals.css";
 import clsx from "clsx";
-import SideBar from "@/components/sidebar";
-import { Footer } from "@/components/footer";
+import { Metadata } from "next";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: {
@@ -40,17 +39,14 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col justify-between h-screen gap-4">
-            <Navbar />
-            <div className="flex justify-center flex-grow w-full">
-              <div className="flex w-4/6 mx-auto gap-5">
-                <SideBar />
-                <main className="container flex w-4/5 max-w-7xl">
-                  {children}
-                </main>
-              </div>
+          <div className="relative flex flex-col h-screen gap-4">
+            <MobileNavbar className="lg:hidden" />
+            <div className="flex justify-center w-full md:w-4/6 mx-auto gap-5 lg:mt-32">
+              <Sidebar />
+              <main className="container w-full md:w-4/5 max-w-7xl justify-around items-center gap-4">
+                {children}
+              </main>
             </div>
-            <Footer />
           </div>
         </Providers>
       </body>

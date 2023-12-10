@@ -7,16 +7,16 @@
   p {
     font-size: 58px;
     font-weight: 500;
-    color: #A5A5AB;
+    color: #a5a5ab;
     position: relative;
 
     &::before {
       content: attr(data-text);
       position: absolute;
-      color: #0070EF;
+      color: #0070ef;
       overflow: hidden;
       white-space: nowrap;
-      border-right: 4px solid #0070EF;
+      border-right: 4px solid #0070ef;
       animation: move 8s linear infinite;
       // filter: drop-shadow(0 0 20px #0070EF) drop-shadow(0 0 50px #0070EF);
     }
@@ -36,11 +36,11 @@
 
   &.light {
     p {
-      color: #A5A5AB;
+      color: #a5a5ab;
 
       &::before {
-        color: #0070EF;
-        border-right: 4px solid #0070EF;
+        color: #0070ef;
+        border-right: 4px solid #0070ef;
         // filter: drop-shadow(0 0 20px #0070EF) drop-shadow(0 0 50px #0070EF);
       }
     }

@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 import { useTheme } from "next-themes";
 import { Skeleton } from "@nextui-org/react";
 
-const TitleAnimation = () => {
+const TitleAnimation = ({ titleText }: { titleText: string }) => {
   const { theme } = useTheme();
 
   const [isThemeLoaded, setIsThemeLoaded] = useState(false);
@@ -26,7 +26,7 @@ const TitleAnimation = () => {
       // can change style based on theme, but now dark or light theme has no difference
       className={`${styles.container} ${theme === "light" ? styles.light : ""}`}
     >
-      <p data-text="AarynLu | 0x3f4.run">AarynLu | 0x3f4.run</p>
+      <p data-text={titleText}>{titleText}</p>
     </div>
   );
 };

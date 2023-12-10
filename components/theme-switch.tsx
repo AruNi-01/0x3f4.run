@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
 import { Switch } from "@nextui-org/react";
-import { SunIcon } from "./root/icon/SunIcon";
-import { MoonIcon } from "./root/icon/MoonIcon";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { MoonIcon, SunIcon } from "./icons";
 
 export const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
@@ -18,7 +17,7 @@ export const ThemeSwitch = () => {
 
   return (
     <Switch
-      size="lg"
+      size="md"
       color="primary"
       isSelected={isSelected}
       onChange={handleThemeChange}
