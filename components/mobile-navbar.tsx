@@ -14,7 +14,7 @@ import {
 } from "@nextui-org/react";
 import NextLink from "next/link";
 import { siteConfig } from "@/config/site";
-import { GithubIcon, HeartFilledIcon } from "./icons";
+import { GithubIcon } from "./icons";
 import { ThemeSwitch } from "./theme-switch";
 
 export const MobileNavbar = ({ className }: { className: string }) => {
@@ -42,9 +42,6 @@ export const MobileNavbar = ({ className }: { className: string }) => {
       </NavbarContent>
 
       <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github} aria-label="Github">
-          <GithubIcon className="text-default-500" />
-        </Link>
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
