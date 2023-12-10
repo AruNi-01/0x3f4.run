@@ -1,10 +1,5 @@
 "use client";
-import {
-  Button,
-  Listbox,
-  ListboxItem,
-  cn
-} from "@nextui-org/react";
+import { Button, Listbox, ListboxItem, cn } from "@nextui-org/react";
 import { usePathname, useRouter } from "next/navigation";
 import { AddNoteIcon, HomeIcon } from "../icons";
 import { ThemeSwitch } from "../theme-switch";
@@ -81,12 +76,9 @@ export default function Sidebar() {
         startContent={<AddNoteIcon className={iconClass} />}
         showDivider={true}
       />
-      <ListboxItem
-        key="footer"
-        variant="light"
-        children={<Footer />}
-        isReadOnly={true}
-      />
+      <ListboxItem key="footer" variant="light" isReadOnly={true}>
+        <Footer />
+      </ListboxItem>
     </Listbox>
   );
 }
