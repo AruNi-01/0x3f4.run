@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <section className="flex flex-col justify-around w-full items-center gap-4">
       <div className="inline-block w-full text-center justify-center">
-        <div className="hidden lg:block">
+        <div className="hidden lg:block min-w-[538px]">
           <TitleAnimation titleText={siteConfig.homePage.titleAnimationStr} />
         </div>
         <div className="lg:hidden">

@@ -41,9 +41,9 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen gap-4">
             <MobileNavbar className="lg:hidden" />
-            <div className="flex justify-center w-full md:w-4/6 mx-auto gap-5 lg:mt-32">
+            <div className="flex justify-center w-full md:w-4/6 mx-auto lg:mt-32 gap-20">
               <Sidebar />
-              <main className="container w-full md:w-4/5 max-w-7xl justify-around items-center gap-4">
+              <main className="container lg:w-2/3 max-w-[759px] justify-around items-center gap-4">
                 {children}
               </main>
             </div>

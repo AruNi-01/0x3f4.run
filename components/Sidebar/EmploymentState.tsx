@@ -18,7 +18,7 @@ export default function EmploymentState() {
       variant="flat"
     >
       <div className="text-xs text-black dark:text-white font-mono">
-        State: <span className="text-primary">Unemployed</span>
+        Current state: <span className="text-primary">Unemployed</span>
       </div>
     </Chip>
   );

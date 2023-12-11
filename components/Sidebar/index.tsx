@@ -20,8 +20,8 @@ export default function Sidebar() {
   };
 
   return (
-    <div className=" self-start hidden lg:flex flex-col gap-3 w-1/5 max-w-2xl">
-      <div className="fixed">
+    <div className="hidden lg:flex flex-col gap-3 w-1/3 max-w-[285px]">
+      <div className="fixed w-1/6 ml-16 max-w-[285px]">
         <Listbox
           items={siteConfig.sidebar.navItems}
           variant="flat"
