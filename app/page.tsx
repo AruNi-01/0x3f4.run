@@ -6,21 +6,21 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { GithubIcon } from "@/components/icons";
 import TitleAnimation from "@/components/TitleAnimation";
-import MottoType from "@/components/MottoType";
+import MottoTyped from "@/components/MottoTyped";
 
 export default function Home() {
   return (
     <section className="flex flex-col justify-around w-full items-center gap-4">
       <div className="inline-block w-full text-center justify-center">
         <div className="hidden lg:block">
-          <TitleAnimation titleText="AarynLu | 0x3f4.run" />
+          <TitleAnimation titleText={siteConfig.homePage.titleAnimationStr} />
         </div>
         <div className="lg:hidden">
-          <TitleAnimation titleText="AarynLu" />
+          <TitleAnimation titleText={siteConfig.mobile.titleAnimationStr} />
         </div>
         <br />
         <h2 className="my-2 text-3xl text-default-500">
-          <MottoType />
+          <MottoTyped motto={siteConfig.homePage.mottoStr} />
         </h2>
       </div>
 

@@ -11,13 +11,20 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   Avatar,
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
 } from "@nextui-org/react";
 import NextLink from "next/link";
 import { siteConfig } from "@/config/site";
-import { GithubIcon } from "./icons";
+import { GithubIcon, MoreIcon } from "./icons";
 import { ThemeSwitch } from "./theme-switch";
+import { useRouter } from "next/navigation";
 
 export const MobileNavbar = ({ className }: { className: string }) => {
+  const router = useRouter();
+
   return (
     <NextUINavbar className={className}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -26,47 +33,42 @@ export const MobileNavbar = ({ className }: { className: string }) => {
             className="flex justify-start items-center gap-5 text-2xl"
             href="/"
           >
-            <Avatar isBordered src="/logo.png" size="sm" />
-            <p className="font-bold text-[#71717A]">AarynLu</p>
+            <Avatar isBordered src={siteConfig.avatar} size="sm" />
+            <p className="font-bold text-[#71717A]">
+              {siteConfig.mobile.headerTitle}
+            </p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
-        <NavbarItem className="hidden lg:flex gap-2">
-          <ThemeSwitch />
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
+      <NavbarContent className="lg:hidden basis-1 pl-4 flex gap-1" justify="end">
         <ThemeSwitch />
-        <NavbarMenuToggle />
-      </NavbarContent>
-
-      <NavbarMenu>
-        <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navMenuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={
-                  index === 2
-                    ? "primary"
-                    : index === siteConfig.navMenuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-                }
-                href="#"
-                size="lg"
+        <Dropdown backdrop="blur">
+          <DropdownTrigger>
+            <Button isIconOnly variant="flat" size="sm">
+              <MoreIcon />
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu
+            aria-label="Dynamic Actions"
+            items={siteConfig.mobile.navMenuItems}
+            variant="flat"
+          >
+            {(item) => (
+              <DropdownItem
+                key={item.label.toLowerCase()}
+                onClick={() => {
+                  router.push(item.href);
+                }}
+                color="default"
+                className=""
               >
                 {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
-        </div>
-      </NavbarMenu>
+              </DropdownItem>
+            )}
+          </DropdownMenu>
+        </Dropdown>
+      </NavbarContent>
     </NextUINavbar>
   );
 };

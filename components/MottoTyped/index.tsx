@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Typed from "typed.js";
 
-const MottoType = () => {
+const MottoTyped = ({ motto }: { motto: string }) => {
   const pRef = useRef<HTMLParagraphElement>(null);
   const typed = useRef<any>(null);
 
@@ -14,7 +14,7 @@ const MottoType = () => {
 
   useEffect(() => {
     const options = {
-      strings: ["The most regretful thing in life is that I could have been"],
+      strings: [motto || ""],
       typeSpeed: 60,
       showCursor: true,
       cursorChar: "_",
@@ -36,4 +36,4 @@ const MottoType = () => {
   return <p className="inline-block" ref={pRef} />;
 };
 
-export default MottoType;
+export default MottoTyped;
