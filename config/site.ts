@@ -23,7 +23,7 @@ export const siteConfig = {
 
   homePage: {
     titleAnimationStr: "AarynLu | 0x3f4.run",
-    mottoStr: "The most regretful thing in life is that I could have been",
+    mottoStr: "The most regretful thing in life is I could have been",
   },
 
   sidebar: {
