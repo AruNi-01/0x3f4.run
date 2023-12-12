@@ -1,20 +1,13 @@
 import { Chip } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
+import AnimatePing from "../ui/AnimatePing";
 
 export default function EmploymentState() {
   const router = useRouter();
 
   return (
     <Chip
-      startContent={
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-full w-full bg-primary"></span>
-        </span>
-      }
-      onClick={() => {
-        router.push("/about");
-      }}
+      startContent={<AnimatePing color="primary" size="2" />}
       variant="flat"
     >
       <div className="text-xs text-black dark:text-white font-mono">

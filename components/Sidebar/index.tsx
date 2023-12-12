@@ -29,16 +29,18 @@ export default function Sidebar() {
         >
           <ListboxItem
             key="header"
-            startContent={<Header />}
+            startContent={<Header className="" />}
             endContent={<ThemeSwitch />}
             variant="light"
             isReadOnly={true}
+            className="cursor-default"
           />
           <ListboxItem
-            key="theme-switch"
+            key="state"
             startContent={<EmploymentState />}
             variant="light"
             showDivider={true}
+            className="cursor-default"
           />
 
           {/* dynamic items, want to replace below ListboxItem */}
@@ -82,7 +84,7 @@ export default function Sidebar() {
             showDivider={true}
           />
 
-          <ListboxItem key="footer" variant="light" isReadOnly={true}>
+          <ListboxItem key="footer" variant="light" isReadOnly={true} className="cursor-default">
             <Footer />
           </ListboxItem>
         </Listbox>

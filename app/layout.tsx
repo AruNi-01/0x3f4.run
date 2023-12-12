@@ -43,7 +43,7 @@ export default function RootLayout({
             <MobileNavbar className="lg:hidden" />
             <div className="flex justify-center w-full md:w-4/6 mx-auto lg:mt-32 gap-24">
               <Sidebar />
-              <main className="container lg:w-2/3 max-w-[765px] justify-around items-center gap-4">
+              <main className="container lg:w-2/3 max-w-[765px] justify-around items-center gap-4 mb-20">
                 {children}
               </main>
             </div>
