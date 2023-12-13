@@ -6,7 +6,7 @@ import {
 } from "@material-tailwind/react";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { Image, Snippet } from "@nextui-org/react";
+import { Image, Snippet, cn } from "@nextui-org/react";
 import React, { MouseEvent } from "react";
 
 export default function ContactWay() {
@@ -54,7 +54,11 @@ export default function ContactWay() {
           }}
           placement="bottom"
           animate={{
-            mount: { scale: 1, y: 0, transition: { duration: 0.5 } },
+            mount: {
+              scale: 1,
+              y: 0,
+              transition: { delay: 0.5, duration: 0.5 },
+            },
             unmount: {
               scale: 0,
               y: -25,
@@ -87,22 +91,36 @@ export default function ContactWay() {
               {contact.searchText ? (
                 <Snippet
                   tooltipProps={{
-                    color: "foreground",
+                    color: "default",
                     content: "Copy to add",
-                    disableAnimation: true,
                     placement: "right",
                     closeDelay: 0,
                   }}
                   symbol="ID: "
                   radius="none"
-                  className="w-full rounded-tl-xl rounded-tr-xl"
+                  className={cn(
+                    "w-full rounded-tl-xl rounded-tr-xl font-medium",
+                    contact.name === "QQ"
+                      ? " bg-neutral-800  text-neutral-500"
+                      : contact.name === "Wechat"
+                      ? " bg-[#C59FAC] text-neutral-200"
+                      : ""
+                  )}
                 >
                   {contact.searchText}
                 </Snippet>
               ) : (
                 ""
               )}
-              {contact.qrCode ? <Image src={contact.qrCode} radius="none" className="rounded-bl-xl rounded-br-xl" /> : ""}
+              {contact.qrCode ? (
+                <Image
+                  src={contact.qrCode}
+                  radius="none"
+                  className="rounded-bl-xl rounded-br-xl"
+                />
+              ) : (
+                ""
+              )}
             </div>
           </PopoverContent>
         </Popover>
