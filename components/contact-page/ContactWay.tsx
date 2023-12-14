@@ -73,7 +73,7 @@ export default function ContactWay() {
             onMouseLeave={onMouseLeaveHandle(contact.id)}
             className="border-none bg-transparent shadow-none"
           >
-            <div className="flex-col items-center gap-4 -mt-1 lg:w-48 w-40">
+            <div className="flex-col items-center gap-4 -mt-1 lg:w-48 w-44">
               {contact.searchText ? (
                 <Snippet
                   tooltipProps={{
