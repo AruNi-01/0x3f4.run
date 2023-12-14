@@ -1,14 +1,8 @@
-import {
-  Timeline,
-  TimelineItem,
-  TimelineIcon,
-  Typography,
-  TimelineHeader,
-} from "@material-tailwind/react";
+import AnimateLink from "@/components/ui/AnimateLink";
+import AnimatePing from "@/components/ui/AnimatePing";
+import { Timeline, TimelineHeader, TimelineIcon, TimelineItem, Typography } from "@material-tailwind/react";
 import { BornIcon, FutureIcon, UniversityIcon } from "../../icons";
 import TimelineConnector from "./TimelineConnector";
-import AnimatePing from "@/components/ui/AnimatePing";
-import Link from "@/components/ui/Link";
 
 export default function LifeTimeline() {
   return (
@@ -24,11 +18,7 @@ export default function LifeTimeline() {
               <Typography variant="h6" color="blue-gray">
                 Born in Guizhou, China
               </Typography>
-              <Typography
-                variant="small"
-                color="gray"
-                className="font-normal dark:text-neutral-400"
-              >
+              <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
                 October 2001
               </Typography>
             </div>
@@ -42,13 +32,12 @@ export default function LifeTimeline() {
             </TimelineIcon>
             <div className="flex flex-col gap-1">
               <Typography variant="h6" color="blue-gray">
-                University in <Link href="https://www.wit.edu.cn/">WIT</Link>
+                University in{" "}
+                <AnimateLink href="https://www.wit.edu.cn/" isExternal={true} className="text-primary">
+                  WIT
+                </AnimateLink>
               </Typography>
-              <Typography
-                variant="small"
-                color="gray"
-                className="font-normal dark:text-neutral-400"
-              >
+              <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
                 September 2020 — Present
               </Typography>
             </div>
@@ -64,11 +53,7 @@ export default function LifeTimeline() {
               <Typography variant="h6" color="blue-gray">
                 Unknowns and Expectations
               </Typography>
-              <Typography
-                variant="small"
-                color="gray"
-                className="font-normal dark:text-neutral-400"
-              >
+              <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
                 Coming soon...
               </Typography>
             </div>

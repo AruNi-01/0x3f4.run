@@ -1,9 +1,5 @@
 import { contactWays } from "@/config/contact-ways";
-import {
-  Popover,
-  PopoverContent,
-  PopoverHandler,
-} from "@material-tailwind/react";
+import { Popover, PopoverContent, PopoverHandler } from "@material-tailwind/react";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { Image, Snippet, cn } from "@nextui-org/react";
@@ -11,17 +7,13 @@ import React, { MouseEvent } from "react";
 
 export default function ContactWay() {
   // use boolean[] to control contact is popover?
-  const [popoverState, setPopoverState] = React.useState<boolean[]>(
-    contactWays.map(() => false)
-  );
+  const [popoverState, setPopoverState] = React.useState<boolean[]>(contactWays.map(() => false));
 
   const onMouseEnterHandle = (id: string, hasPopover: boolean) => {
     if (!hasPopover) return;
     return (event: MouseEvent<HTMLDivElement>) => {
       return setPopoverState((prevStates) => {
-        return prevStates.map((state, index) =>
-          contactWays[index].id === id ? true : state
-        );
+        return prevStates.map((state, index) => (contactWays[index].id === id ? true : state));
       });
     };
   };
@@ -29,9 +21,7 @@ export default function ContactWay() {
   const onMouseLeaveHandle = (id: string) => {
     return (event: MouseEvent<HTMLDivElement>) => {
       return setPopoverState((prevStates) => {
-        return prevStates.map((state, index) =>
-          contactWays[index].id === id ? false : state
-        );
+        return prevStates.map((state, index) => (contactWays[index].id === id ? false : state));
       });
     };
   };
@@ -41,15 +31,11 @@ export default function ContactWay() {
       {contactWays.map((contact) => (
         <Popover
           key={contact.name}
-          open={popoverState.find(
-            (_, index) => contactWays[index].id === contact.id
-          )}
+          open={popoverState.find((_, index) => contactWays[index].id === contact.id)}
           handler={(isOpen) => {
             if (!contact.hasPopover) return;
             setPopoverState((prevStates) =>
-              prevStates.map((state, index) =>
-                contactWays[index].id === contact.id ? isOpen : state
-              )
+              prevStates.map((state, index) => (contactWays[index].id === contact.id ? isOpen : state))
             );
           }}
           placement="bottom"
@@ -85,9 +71,9 @@ export default function ContactWay() {
           <PopoverContent
             onMouseEnter={onMouseEnterHandle(contact.id, contact.hasPopover)}
             onMouseLeave={onMouseLeaveHandle(contact.id)}
-            className="border-none bg-transparent shadow-none w-48"
+            className="border-none bg-transparent shadow-none"
           >
-            <div className="flex-col items-center gap-4 -mt-1 w-48">
+            <div className="flex-col items-center gap-4 -mt-1 lg:w-48 w-40">
               {contact.searchText ? (
                 <Snippet
                   tooltipProps={{
@@ -113,11 +99,7 @@ export default function ContactWay() {
                 ""
               )}
               {contact.qrCode ? (
-                <Image
-                  src={contact.qrCode}
-                  radius="none"
-                  className="rounded-bl-xl rounded-br-xl"
-                />
+                <Image src={contact.qrCode} radius="none" className="rounded-bl-xl rounded-br-xl" />
               ) : (
                 ""
               )}
