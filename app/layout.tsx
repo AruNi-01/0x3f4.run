@@ -3,6 +3,7 @@ import { MobileNavbar } from "@/components/mobile-navbar";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import { Metadata } from "next";
 import { Providers } from "./providers";
@@ -24,20 +25,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body
-        className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
+      <body className={clsx("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen gap-4">
             <MobileNavbar className="lg:hidden" />
@@ -45,6 +37,7 @@ export default function RootLayout({
               <Sidebar />
               <main className="container lg:w-2/3 max-w-[775px] justify-around items-center gap-4 mb-20 -mt-14">
                 {children}
+                <Analytics />
               </main>
             </div>
           </div>
