@@ -10,7 +10,7 @@ export default function SendedTip({ isSuccess, onCloseHandle }: { isSuccess: boo
       size="lg"
       variant="light"
       classNames={{
-        closeButton: "ml-6",
+        closeButton: "lg:ml-6",
       }}
       className="font-bold"
     >
