@@ -317,3 +317,22 @@ export const FailIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   );
 };
 
+export const SiteIcon: React.FC<IconSvgProps> = ({ ...props }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1024 1024"
+      version="1.1"
+      p-id="4591"
+      width="20"
+      height="20"
+      {...props}
+    >
+      <path
+        d="M736 864H288c-17.6 0-32 14.4-32 32s14.4 32 32 32h448c17.6 0 32-14.4 32-32s-14.4-32-32-32zM832 96H192c-70.4 0-128 57.6-128 128v416c0 70.4 57.6 128 128 128h640c70.4 0 128-57.6 128-128V224c0-70.4-57.6-128-128-128zM576 544c0 17.6-14.4 32-32 32H288c-17.6 0-32-14.4-32-32s14.4-32 32-32h256c17.6 0 32 14.4 32 32z m192-224c0 17.6-14.4 32-32 32H288c-17.6 0-32-14.4-32-32s14.4-32 32-32h448c17.6 0 32 14.4 32 32z"
+        p-id="4592"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};

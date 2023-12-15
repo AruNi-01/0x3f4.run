@@ -1,0 +1,50 @@
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.borderLight {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    box-sizing: border-box;
+    background-color: inherit;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(transparent, #0070f0, transparent 30%);
+    animation: rotate 5s linear infinite;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 3px;
+    top: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background: inherit;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+}
+
+@keyframes opacityChange {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
