@@ -1,17 +1,22 @@
-import { Button } from "@nextui-org/button";
-import style from "./index.module.scss";
-import { SiteIcon } from "@/components/icons";
-import { Link, Image } from "@nextui-org/react";
-import { otherSites } from "@/config/other-sites";
 import AnimateArrow from "@/components/ui/AnimateArrow";
+import { otherSites } from "@/config/other-sites";
+import infinity from "@/public/lottie/infinity.json";
+import { Button } from "@nextui-org/button";
+import { Image, Link } from "@nextui-org/react";
+import Lottie from "lottie-react";
+import { useRef } from "react";
+import style from "./index.module.scss";
 
 export default function OtherSite() {
+  const infinityRef = useRef<any>();
+  infinityRef.current?.setSpeed(0.7);
+
   return (
     <div
-      className={`${style.borderLight} w-full max-w-sm p-4 bg-[#F5F5F5] border border-gray-200 rounded-xl shadow sm:p-6 dark:bg-[#171717] dark:border-gray-700`}
+      className={`${style.borderLight} w-full max-w-sm p-4 bg-[#F5F5F5] border border-gray-200 rounded-xl shadow sm:p-6 dark:bg-neutral-900 dark:border-gray-700`}
     >
-      <div className="flex items-center gap-3 mb-3 text-lg font-semibold text-gray-900 dark:text-white">
-        <SiteIcon />
+      <div className="flex items-center gap-2 mb-3 text-lg font-semibold text-gray-900 dark:text-neutral-400">
+        <Lottie animationData={infinity} lottieRef={infinityRef} style={{ width: 32, height: 32 }} />
         Welcome focus my other sites.
       </div>
       <ul className="my-4 space-y-3">
