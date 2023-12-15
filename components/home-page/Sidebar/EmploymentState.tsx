@@ -1,5 +1,5 @@
 import { Chip } from "@nextui-org/react";
-import AnimatePing from "../ui/AnimatePing";
+import AnimatePing from "../../ui/AnimatePing";
 
 export default function EmploymentState() {
   return (

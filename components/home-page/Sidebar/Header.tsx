@@ -1,5 +1,5 @@
 import { User } from "@nextui-org/react";
-import Link from "../ui/Link";
+import Link from "../../ui/Link";
 
 export default function Header({ className }: { className?: string }) {
   return (

@@ -1,5 +1,5 @@
-import Sidebar from "@/components/Sidebar";
-import { MobileNavbar } from "@/components/mobile-navbar";
+import Sidebar from "@/components/home-page/Sidebar";
+import { MobileNavbar } from "@/components/home-page/mobile-navbar";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";

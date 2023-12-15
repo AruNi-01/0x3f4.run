@@ -2,7 +2,7 @@
 import { siteConfig } from "@/config/site";
 import { Listbox, ListboxItem, cn } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
-import { AddNoteIcon } from "../icons";
+import { AddNoteIcon } from "../../icons";
 import { ThemeSwitch } from "../theme-switch";
 import EmploymentState from "./EmploymentState";
 import { Footer } from "./Footer";

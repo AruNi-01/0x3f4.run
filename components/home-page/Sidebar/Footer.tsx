@@ -1,5 +1,5 @@
-import { VercelIcon } from "../icons";
-import Link from "../ui/Link";
+import { VercelIcon } from "../../icons";
+import Link from "../../ui/Link";
 
 export const Footer = () => {
   return (

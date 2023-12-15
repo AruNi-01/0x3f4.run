@@ -18,7 +18,7 @@ import {
 } from "@nextui-org/react";
 import NextLink from "next/link";
 import { siteConfig } from "@/config/site";
-import { GithubIcon, MoreIcon } from "./icons";
+import { GithubIcon, MoreIcon } from "../icons";
 import { ThemeSwitch } from "./theme-switch";
 import { useRouter } from "next/navigation";
 

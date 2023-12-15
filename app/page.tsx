@@ -1,7 +1,7 @@
 "use client";
-import MottoTyped from "@/components/MottoTyped";
-import TitleAnimation from "@/components/TitleAnimation";
-import TopTip from "@/components/TopTip";
+import MottoTyped from "@/components/home-page/MottoTyped";
+import TitleAnimation from "@/components/home-page/TitleAnimation";
+import TopTip from "@/components/home-page/TopTip";
 import { siteConfig } from "@/config/site";
 import { Button } from "@nextui-org/button";
 import { useRouter } from "next/navigation";
