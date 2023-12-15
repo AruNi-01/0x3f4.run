@@ -1,10 +1,11 @@
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { CongratulationIcon } from "./icons";
+import { CongratulationIcon } from "../../icons";
+import style from "./index.module.scss";
 
 export default function TopTip() {
   return (
-    <div className="px-4 mx-auto max-w-screen-xl text-center">
+    <div className={`px-4 mx-auto max-w-screen-xl text-center ${style.floatingY}`}>
       <Button
         as={Link}
         href="https://github.com/aruni-01/0x3f4.run"

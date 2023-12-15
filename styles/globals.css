@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-light-bkg: #6472;
+    --color-dark-bkg: radial-gradient(
+      circle,
+      #03080e,
+      #04060c,
+      #040409,
+      #040206,
+      #030103,
+      #040103,
+      #050003,
+      #060003,
+      #090006,
+      #0b000b,
+      #0b010f,
+      #0a0213
+    );
+  }
+}

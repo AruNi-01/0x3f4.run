@@ -13,7 +13,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        "bounce-slow": "bounce 2.5s infinite",
+        "bounce-slow-2500": "bounce 2.5s infinite",
+        "bounce-slow-3500": "bounce 3.5s infinite",
       },
       keyframes: {
         bounce: {

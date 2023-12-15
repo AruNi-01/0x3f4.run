@@ -14,7 +14,9 @@ export default function SendedTip({ isSuccess, onCloseHandle }: { isSuccess: boo
       }}
       className="font-bold"
     >
-      {isSuccess ? "Send success, I will reply you soon." : "Send fail, mis-typed or server error."}
+      <span className="block whitespace-normal leading-4">
+        {isSuccess ? "Send success, I will reply you soon." : "Send fail, mis-typed or server error."}
+      </span>
     </Chip>
   );
 }

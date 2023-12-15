@@ -44,7 +44,7 @@ export default function LifeTimeline() {
             <AnimatePing color="primary" size="3" className="flex ml-8" />
           </TimelineHeader>
         </TimelineItem>
-        <TimelineItem className="h-28 animate-bounce-slow">
+        <TimelineItem className="h-28 animate-bounce-slow-2500">
           <TimelineHeader className="transition ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4  shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
             <TimelineIcon className="p-3" variant="ghost" color="green">
               <FutureIcon />
