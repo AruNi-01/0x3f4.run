@@ -3,6 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  /* hidden browser scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-[0px];
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-2xl bg-neutral-500;
+  }
+
   :root {
     --color-light-bkg: #6472;
     --color-dark-bkg: radial-gradient(
@@ -21,4 +30,8 @@
       #0a0213
     );
   }
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
 }

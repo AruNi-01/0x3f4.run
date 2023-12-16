@@ -1,3 +1,5 @@
+import { AboutIcon, ContactIcon, HomeIcon, ProjectIcon } from "@/components/icons";
+
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
@@ -31,18 +33,22 @@ export const siteConfig = {
     navItems: [
       {
         label: "Home",
+        icon: <HomeIcon />,
         href: "/",
       },
       {
         label: "Project",
+        icon: <ProjectIcon />,
         href: "/project",
       },
       {
         label: "About",
+        icon: <AboutIcon />,
         href: "/about",
       },
       {
         label: "Contact",
+        icon: <ContactIcon />,
         href: "/contact",
       },
     ],
@@ -51,20 +57,6 @@ export const siteConfig = {
   mobile: {
     headerTitle: "AarynLu",
     titleAnimationStr: "AarynLu", // don't too long
-    navMenuItems: [
-      {
-        label: "Project",
-        href: "/project",
-      },
-      {
-        label: "About",
-        href: "/about",
-      },
-      {
-        label: "Contact",
-        href: "/contact",
-      },
-    ],
   },
 
   links: {

@@ -51,7 +51,7 @@ export const MobileNavbar = ({ className }: { className: string }) => {
           </DropdownTrigger>
           <DropdownMenu
             aria-label="Dynamic Actions"
-            items={siteConfig.mobile.navMenuItems}
+            items={siteConfig.sidebar.navItems}
             variant="flat"
           >
             {(item) => (

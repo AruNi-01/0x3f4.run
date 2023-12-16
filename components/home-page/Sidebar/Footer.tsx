@@ -14,7 +14,7 @@ export const Footer = () => {
           AarynLu
         </Link>
       </div>
-      <div className="flex justify-center gap-2 mt-1">
+      <div className="flex justify-center gap-2 mt-0">
         <p className="font-normal">Deployed on</p>
         <Link href={siteConfig.links.vercel}>
           <VercelIcon className="" height={16} />

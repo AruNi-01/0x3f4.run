@@ -47,9 +47,6 @@ export default function EmailForm() {
         throw new Error("Send fail, mis-typed or server error.");
       }
       setIsSendSuccess(true);
-      setNameValue("");
-      setEmailValue("");
-      setMessageInput("");
     } catch (error) {
       if (error instanceof Error) {
         console.error(error.message);
@@ -59,6 +56,11 @@ export default function EmailForm() {
       setTimeout(() => {
         setIsSending(false);
         openSendTip();
+        if (isSendSuccess) {
+          setNameValue("");
+          setEmailValue("");
+          setMessageInput("");
+        }
       }, 3300);
     }
   }
