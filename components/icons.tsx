@@ -118,20 +118,23 @@ export const BackIcon: React.FC<IconSvgProps> = ({ ...props }) => {
 
 export const MoreIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1024 1024"
-      version="1.1"
-      p-id="4254"
-      data-spm-anchor-id="a313x.search_index.0.i2.54473a81Vr48K6"
-      width="16"
-      height="16"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" {...props}>
       <path
-        d="M512 343.04c87.64416 0 158.72 71.04512 158.72 158.72 0 87.64416-71.07584 158.72-158.72 158.72-87.64416 0-158.72-71.07584-158.72-158.72 0-87.67488 71.07584-158.72 158.72-158.72z m417.28 81.92c46.64832 0 84.48 37.8112 84.48 84.48 0 46.64832-37.83168 84.48-84.48 84.48S844.8 556.08832 844.8 509.44c0-46.6688 37.83168-84.48 84.48-84.48zM179.2 511.14496c0 46.65344-37.83168 84.48-84.48 84.48S10.24 557.7984 10.24 511.14496c0-46.66368 37.83168-84.48 84.48-84.48S179.2 464.4864 179.2 511.14496z"
-        fill="currentColor"
-        p-id="4255"
+        fill-rule="evenodd"
+        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  );
+};
+
+export const MoreOpenIcon: React.FC<IconSvgProps> = ({ ...props }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" {...props}>
+      <path
+        fill-rule="evenodd"
+        d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
+        clip-rule="evenodd"
       />
     </svg>
   );

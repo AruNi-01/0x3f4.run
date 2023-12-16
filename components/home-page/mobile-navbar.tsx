@@ -1,59 +1,60 @@
 "use client";
-import React from "react";
+import { siteConfig } from "@/config/site";
 import {
-  Navbar as NextUINavbar,
+  Avatar,
+  Button,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
   NavbarBrand,
   NavbarContent,
-  NavbarItem,
-  Link,
-  Button,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-  Avatar,
-  Dropdown,
-  DropdownTrigger,
-  DropdownMenu,
-  DropdownItem,
+  Navbar as NextUINavbar,
+  cn,
 } from "@nextui-org/react";
 import NextLink from "next/link";
-import { siteConfig } from "@/config/site";
-import { GithubIcon, MoreIcon } from "../icons";
+import { usePathname, useRouter } from "next/navigation";
+import { MoreIcon, MoreOpenIcon } from "../icons";
 import { ThemeSwitch } from "./theme-switch";
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export const MobileNavbar = ({ className }: { className: string }) => {
   const router = useRouter();
+  const pathname = usePathname();
+  const itemActiveClass = (path: string): object => {
+    return {
+      "bg-[#eeeeef] dark:bg-neutral-800": pathname === path,
+    };
+  };
+
+  const [dropIsOpen, setDropIsOpen] = useState(false);
 
   return (
     <NextUINavbar shouldHideOnScroll className={className}>
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink
-            className="flex justify-start items-center gap-5 text-2xl"
-            href="/"
-          >
+          <NextLink className="flex justify-start items-center gap-5 text-2xl" href="/">
             <Avatar isBordered src={siteConfig.avatar} size="sm" />
-            <p className="font-bold text-[#71717A]">
-              {siteConfig.mobile.headerTitle}
-            </p>
+            <p className="font-bold text-[#71717A]">{siteConfig.mobile.headerTitle}</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="lg:hidden basis-1 pl-4 flex gap-1" justify="end">
         <ThemeSwitch />
-        <Dropdown backdrop="blur">
+        <Dropdown
+          backdrop="opaque"
+          isOpen={dropIsOpen}
+          onOpenChange={() => {
+            setDropIsOpen(!dropIsOpen);
+          }}
+        >
           <DropdownTrigger>
             <Button isIconOnly variant="flat" size="sm">
-              <MoreIcon />
+              {dropIsOpen ? <MoreOpenIcon /> : <MoreIcon />}
             </Button>
           </DropdownTrigger>
-          <DropdownMenu
-            aria-label="Dynamic Actions"
-            items={siteConfig.sidebar.navItems}
-            variant="flat"
-          >
+          <DropdownMenu aria-label="Dynamic Actions" items={siteConfig.sidebar.navItems} variant="flat">
             {(item) => (
               <DropdownItem
                 key={item.label.toLowerCase()}
@@ -61,9 +62,12 @@ export const MobileNavbar = ({ className }: { className: string }) => {
                   router.push(item.href);
                 }}
                 color="default"
-                className=""
+                className={cn("", itemActiveClass(item.href))}
               >
-                {item.label}
+                <div className="flex justify-start gap-2">
+                  {item.icon}
+                  <span className="font-semibold dark:text-neutral-300">{item.label}</span>
+                </div>
               </DropdownItem>
             )}
           </DropdownMenu>
