@@ -6,10 +6,18 @@ import TopTip from "@/components/home-page/TopTip";
 import AnimateArrow from "@/components/ui/AnimateArrow";
 import { siteConfig } from "@/config/site";
 import { Button } from "@nextui-org/button";
+import Lottie from "lottie-react";
+import meIcon from "@/public/lottie/me.json";
 import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const router = useRouter();
+
+  const meRef = useRef<any>();
+  useEffect(() => {
+    meRef.current?.goToAndStop(285, true);
+  }, []);
 
   return (
     <section className="flex flex-col justify-around w-full items-center gap-10">
@@ -26,12 +34,24 @@ export default function Home() {
           <MottoTyped motto={siteConfig.homePage.mottoStr} />
         </h2>
       </div>
-
-      <div className="flex gap-3">
-        <Button onClick={() => router.push("/about")} size="lg" radius="md" variant="flat">
-          <AnimateArrow text="Know more about me" size={24} arrowColor="text-primary" />
-        </Button>
-      </div>
+      <Button
+        onClick={() => router.push("/about")}
+        onMouseEnter={() => {
+          meRef.current?.play();
+        }}
+        onMouseLeave={() => {
+          meRef.current?.stop();
+          meRef.current?.goToAndStop(285, true);
+        }}
+        size="lg"
+        radius="md"
+        variant="flat"
+        color="default"
+        className="flex gap-2 border border-neutral-300 dark:border-neutral-800 shadow-sm shadow-neutral-300 dark:shadow-neutral-800"
+      >
+        <Lottie animationData={meIcon} lottieRef={meRef} style={{ width: 38, height: 38 }} />
+        <AnimateArrow text="Know more about me" textSize="text-xl" textColor="text-primary" size={32} arrowColor="text-primary" />
+      </Button>
       <Footer className="lg:hidden absolute bottom-3" />
     </section>
   );

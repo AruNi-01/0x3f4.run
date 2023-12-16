@@ -3,11 +3,13 @@ import { cn } from "@nextui-org/system";
 export default function AnimateArrow({
   text,
   textColor,
+  textSize,
   arrowColor,
   size,
   className,
 }: {
   text?: string;
+  textSize?: string;
   textColor?: string;
   arrowColor?: string;
   size?: number;
@@ -15,7 +17,7 @@ export default function AnimateArrow({
 }) {
   return (
     <div className={cn("group inline-flex items-center justify-center text-base font-medium", className)}>
-      <span className={cn("w-full", textColor)}>{text}</span>
+      <span className={cn("w-full", textColor, textSize)}>{text}</span>
       <span className={cn("transition-all ease-in-out duration-1000 group-hover:translate-x-2", arrowColor)}>
         {/* prettier-ignore */}
         <svg className="rtl:rotate-180" fill="none" width={size} height={size} viewBox="0 0 72 72" aria-hidden="true" style={{ transition: 'all 1s ease-in-out' }}>
