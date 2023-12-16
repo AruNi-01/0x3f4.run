@@ -8,27 +8,15 @@ export const siteConfig = {
   avatar: "/logo.png",
   browserIcon: "/favicon.ico",
 
-  navMenuItems: [
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
-    },
-    {
-      label: "Projects",
-      href: "/projects",
-    },
-  ],
-
   homePage: {
     titleAnimationStr: "AarynLu | 0x3f4.run",
     mottoStr: "The most regretful thing in life is I could have been",
   },
 
   sidebar: {
+    headTitle: "AarynLu",
+    headIcon: "/logo.png",
+    linkLabel: "AruNi-01",
     state: "Unemployed",
     navItems: [
       {

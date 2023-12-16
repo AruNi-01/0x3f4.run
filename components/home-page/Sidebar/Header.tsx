@@ -13,10 +13,10 @@ export default function Header({ className }: { className?: string }) {
           classNames={{
             name: "text-[17px] font-bold",
           }}
-          name="AarynLu"
-          description={<Link href={siteConfig.links.authGitHub}>@AruNi-01</Link>}
+          name={siteConfig.sidebar.headTitle}
+          description={<Link href={siteConfig.links.authGitHub}>@{siteConfig.sidebar.linkLabel}</Link>}
           avatarProps={{
-            src: "/logo.png",
+            src: siteConfig.sidebar.headIcon,
           }}
         />
         <ThemeSwitch />
