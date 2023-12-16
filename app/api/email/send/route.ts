@@ -20,7 +20,7 @@ const EMAIL_AUTH_CODE = process.env.EMAIL_AUTH_CODE;
 // });
 
 const transporter = nodemailer.createTransport({
-  service: "qq",
+  service: EMAIL_HOST,
   secure: true,
   auth: {
     user: EMAIL_FROM,
