@@ -3,8 +3,8 @@ export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "AarynLu",
   description: "AarynLu's personal website, made by NextUI, deployed on Vercel.",
-	avatar: "/logo.png",
-	browserIcon: "/favicon.ico",
+  avatar: "/logo.png",
+  browserIcon: "/favicon.ico",
 
   navMenuItems: [
     {
@@ -68,10 +68,13 @@ export const siteConfig = {
   },
 
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    repo: "https://github.com/AruNi-01/0x3f4.run",
+    react: "https://react.dev",
+    nextjs: "https://nextjs.org",
+    tailwindcss: "https://tailwindcss.com",
+    wit: "https://www.wit.edu.cn/",
+    vercel: "https://www.vercel.com",
+    authGitHub: "https://github.com/AruNi-01",
+    authTwitter: "https://twitter.com/AruNi_Lu",
   },
 };

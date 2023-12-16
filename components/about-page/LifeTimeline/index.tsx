@@ -3,6 +3,7 @@ import AnimatePing from "@/components/ui/AnimatePing";
 import { Timeline, TimelineHeader, TimelineIcon, TimelineItem, Typography } from "@material-tailwind/react";
 import { BornIcon, FutureIcon, UniversityIcon } from "../../icons";
 import TimelineConnector from "./TimelineConnector";
+import { siteConfig } from "@/config/site";
 
 export default function LifeTimeline() {
   return (
@@ -33,7 +34,7 @@ export default function LifeTimeline() {
             <div className="flex flex-col gap-1">
               <Typography variant="h6" color="blue-gray">
                 University in{" "}
-                <AnimateLink href="https://www.wit.edu.cn/" isExternal={true} className="text-primary">
+                <AnimateLink href={siteConfig.links.wit} isExternal={true} className="text-primary">
                   WIT
                 </AnimateLink>
               </Typography>

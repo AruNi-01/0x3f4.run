@@ -1,3 +1,5 @@
+import { siteConfig } from "./site";
+
 export const contactWays = [
   {
     id: "1",
@@ -19,7 +21,7 @@ export const contactWays = [
     id: "3",
     name: "Twitter",
     icon: "/contact/twitter.svg",
-    link: "https://twitter.com/AruNi_Lu",
+    link: siteConfig.links.authTwitter,
     hasPopover: false,
   },
 ];
