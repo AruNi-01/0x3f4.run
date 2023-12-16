@@ -1,5 +1,6 @@
 "use client";
 import MottoTyped from "@/components/home-page/MottoTyped";
+import { Footer } from "@/components/home-page/Sidebar/Footer";
 import TitleAnimation from "@/components/home-page/TitleAnimation";
 import TopTip from "@/components/home-page/TopTip";
 import AnimateArrow from "@/components/ui/AnimateArrow";
@@ -31,6 +32,7 @@ export default function Home() {
           <AnimateArrow text="Know more about me" size={24} arrowColor="text-primary" />
         </Button>
       </div>
+      <Footer className="lg:hidden absolute bottom-3" />
     </section>
   );
 }

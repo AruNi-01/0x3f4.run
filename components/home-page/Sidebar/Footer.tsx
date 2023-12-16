@@ -1,16 +1,14 @@
 import { siteConfig } from "@/config/site";
 import { VercelIcon } from "../../icons";
 import Link from "../../ui/Link";
+import { cn } from "@nextui-org/system";
 
-export const Footer = () => {
+export const Footer = ({ className }: { className?: string }) => {
   return (
-    <div className="text-sm text-[#71717A]">
+    <div className={cn("text-sm text-[#71717A]", className)}>
       <div className="flex justify-center gap-2">
         <p className="font-normal">© 2023 -</p>
-        <Link
-          href={siteConfig.links.repo}
-          className="text-sm"
-        >
+        <Link href={siteConfig.links.repo} className="text-sm">
           AarynLu
         </Link>
       </div>
