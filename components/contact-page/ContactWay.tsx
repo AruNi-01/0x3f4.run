@@ -43,12 +43,12 @@ export default function ContactWay() {
             mount: {
               scale: 1,
               y: 0,
-              transition: { delay: 0.5, duration: 0.5 },
+              transition: { delay: 0, duration: 0.5 },
             },
             unmount: {
               scale: 0,
               y: -25,
-              transition: { delay: 0.5, duration: 0.8 },
+              transition: { delay: 0, duration: 1.5 },
             },
           }}
         >
