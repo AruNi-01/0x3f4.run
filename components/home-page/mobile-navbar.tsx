@@ -65,7 +65,7 @@ export const MobileNavbar = ({ className }: { className: string }) => {
                 className={cn("", itemActiveClass(item.href))}
               >
                 <div className="flex justify-start gap-2">
-                  {item.icon}
+                  {item.href === pathname ? item.solidIcon : item.outlineIcon}
                   <span className="font-semibold dark:text-neutral-300">{item.label}</span>
                 </div>
               </DropdownItem>

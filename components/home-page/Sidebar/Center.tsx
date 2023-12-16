@@ -23,7 +23,7 @@ export default function Center() {
           href={item.href}
           className={cn("flex justify-start gap-2 w-full", itemActiveClass(item.href))}
         >
-          {item.icon}
+          {item.href === pathname ? item.solidIcon : item.outlineIcon}
           <span className="font-semibold dark:text-neutral-300">{item.label}</span>
         </Button>
       ))}

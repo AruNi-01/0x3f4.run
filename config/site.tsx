@@ -1,4 +1,13 @@
-import { AboutIcon, ContactIcon, HomeIcon, ProjectIcon } from "@/components/icons";
+import {
+  AboutOutlineIcon,
+  AboutSolidIcon,
+  ContactOutlineIcon,
+  ContactSolidIcon,
+  HomeOutlineIcon,
+  HomeSolidIcon,
+  ProjectOutlineIcon,
+  ProjectSolidIcon,
+} from "@/components/icons";
 
 export type SiteConfig = typeof siteConfig;
 
@@ -21,22 +30,26 @@ export const siteConfig = {
     navItems: [
       {
         label: "Home",
-        icon: <HomeIcon />,
+        outlineIcon: <HomeOutlineIcon />,
+        solidIcon: <HomeSolidIcon />,
         href: "/",
       },
       {
         label: "Project",
-        icon: <ProjectIcon />,
+        outlineIcon: <ProjectOutlineIcon />,
+        solidIcon: <ProjectSolidIcon />,
         href: "/project",
       },
       {
         label: "About",
-        icon: <AboutIcon />,
+        outlineIcon: <AboutOutlineIcon />,
+        solidIcon: <AboutSolidIcon />,
         href: "/about",
       },
       {
         label: "Contact",
-        icon: <ContactIcon />,
+        outlineIcon: <ContactOutlineIcon />,
+        solidIcon: <ContactSolidIcon />,
         href: "/contact",
       },
     ],
