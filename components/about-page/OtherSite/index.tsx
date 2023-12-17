@@ -13,7 +13,7 @@ export default function OtherSite() {
 
   return (
     <div
-      className={`${style.borderLight} w-full max-w-sm p-4 bg-[#F5F5F5] border border-gray-200 rounded-xl shadow sm:p-6 dark:bg-neutral-900 dark:border-gray-700`}
+      className={`${style.borderLight} w-full max-w-sm p-4 bg-[#F5F5F5] border border-gray-200 rounded-xl shadow sm:p-6 dark:bg-neutral-900 dark:border-gray-800`}
     >
       <div className="flex items-center gap-2 mb-3 text-lg font-semibold text-gray-900 dark:text-neutral-400">
         <Lottie animationData={infinity} lottieRef={infinityRef} style={{ width: 32, height: 32 }} />
