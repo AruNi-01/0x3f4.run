@@ -12,7 +12,7 @@ export default function AnimateArrow({
   textSize?: string;
   textColor?: string;
   arrowColor?: string;
-  size?: number;
+  size: number;
   className?: string;
 }) {
   return (

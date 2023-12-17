@@ -23,7 +23,7 @@ export const MobileNavbar = ({ className }: { className: string }) => {
   const pathname = usePathname();
   const itemActiveClass = (path: string): object => {
     return {
-      "bg-[#eeeeef] dark:bg-neutral-800": pathname === path,
+      "bg-[#eeeeef] dark:bg-neutral-800": path !== "/" ? pathname.startsWith(path) : pathname === path,
     };
   };
 
@@ -65,7 +65,9 @@ export const MobileNavbar = ({ className }: { className: string }) => {
                 className={cn("", itemActiveClass(item.href))}
               >
                 <div className="flex justify-start gap-2">
-                  {item.href === pathname ? item.solidIcon : item.outlineIcon}
+                  {(item.href !== "/" ? pathname.startsWith(item.href) : pathname === item.href)
+                    ? item.solidIcon
+                    : item.outlineIcon}
                   <span className="font-semibold dark:text-neutral-300">{item.label}</span>
                 </div>
               </DropdownItem>

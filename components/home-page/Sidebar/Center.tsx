@@ -8,7 +8,7 @@ export default function Center() {
   const pathname = usePathname();
   const itemActiveClass = (path: string): object => {
     return {
-      "bg-[#eeeeef] dark:bg-neutral-800": pathname === path,
+      "bg-[#eeeeef] dark:bg-neutral-800": path !== "/" ? pathname.startsWith(path) : pathname === path,
     };
   };
 
@@ -23,7 +23,9 @@ export default function Center() {
           href={item.href}
           className={cn("flex justify-start gap-2 w-full", itemActiveClass(item.href))}
         >
-          {item.href === pathname ? item.solidIcon : item.outlineIcon}
+          {(item.href !== "/" ? pathname.startsWith(item.href) : pathname === item.href)
+            ? item.solidIcon
+            : item.outlineIcon}
           <span className="font-semibold dark:text-neutral-300">{item.label}</span>
         </Button>
       ))}

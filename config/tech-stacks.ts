@@ -90,8 +90,8 @@ export const techStacks = {
     },
     {
       name: "React",
-      src: "/tech/reactjs.svg",
-      href: "https://reactjs.dev/",
+      src: "/tech/react.svg",
+      href: "https://react.dev/",
     },
     {
       name: "Next.js",
