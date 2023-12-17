@@ -1,11 +1,11 @@
 "use client";
-import { Card, CardHeader, CardBody, CardFooter, Typography } from "@material-tailwind/react";
-import { Button, Image, Link } from "@nextui-org/react";
-import AnimateArrow from "../ui/AnimateArrow";
 import { ProjectsProps } from "@/types/ProjectsProps";
-import { motion, useMotionTemplate, useMotionValue, useTransform } from "framer-motion";
+import { Card, CardBody, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
+import { Button, Image, Link } from "@nextui-org/react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTheme } from "next-themes";
 import { DarkMouseShadowColors, LightMouseShadowColors } from "../constants";
+import AnimateArrow from "../ui/AnimateArrow";
 
 export function ProjectCard(props: ProjectsProps) {
   const { name, shortIntro, coverImg, slug, techStacks } = props;
@@ -25,14 +25,8 @@ export function ProjectCard(props: ProjectsProps) {
       }}
       className="group/motion flex dark:bg-neutral-900"
     >
-      <CardHeader color="blue-gray" className="z-50 relative h-32">
-        <Image
-          isZoomed
-          src={coverImg}
-          alt={name}
-          className="object-contain w-full h-full"
-          style={{ maxWidth: "100%", height: "auto" }}
-        />
+      <CardHeader color="blue-gray" className="group/img z-50 h-44 relative">
+        <img src={coverImg} alt={name} className="object-cover w-full h-full transition-all ease-in-out duration-1000 group-hover/img:scale-110" />
       </CardHeader>
       <CardBody className="z-50 dark:text-neutral-100 cursor-default">
         <div className="mb-2 flex justify-between items-center">
@@ -43,7 +37,7 @@ export function ProjectCard(props: ProjectsProps) {
             <AnimateArrow text="MORE" size={20} />
           </Button>
         </div>
-        <Typography className="dark:text-neutral-300">{shortIntro}</Typography>
+        <Typography className="dark:text-neutral-300 lg:line-clamp-2 overflow-ellipsis">{shortIntro}</Typography>
       </CardBody>
       <CardFooter className="flex flex-wrap z-50 items-center gap-2 pt-0">
         {techStacks?.map((tech) => (

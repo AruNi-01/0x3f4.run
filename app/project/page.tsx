@@ -16,7 +16,7 @@ export default function BlogPage() {
       </div>
       <ul className="grid place-items-start gap-5 lg:grid-cols-2">
         {projects.map((project) => (
-          <li key={project.name} className="mt-6">
+          <li key={project.slug} className="mt-6">
             <ProjectCard {...project} />
           </li>
         ))}
