@@ -4,6 +4,7 @@ import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import clsx from "clsx";
 import { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <main className="container lg:w-2/3 max-w-[775px] justify-around items-center gap-4 mb-20 -mt-14">
                 {children}
                 <Analytics />
+                <SpeedInsights />
               </main>
             </div>
           </div>
