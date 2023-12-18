@@ -47,7 +47,8 @@ export default function ProjectDetail(props: ProjectsProps) {
                 as={Link}
                 isExternal
                 href={previewLink}
-                variant="light"
+                variant="flat"
+                color="default"
                 size="lg"
                 startContent={<PreviewIcon />}
                 endContent={<span className="-ml-1 font-bold">Preview</span>}
@@ -59,7 +60,8 @@ export default function ProjectDetail(props: ProjectsProps) {
                 as={Link}
                 isExternal
                 href={sourceLink}
-                variant="light"
+                variant="flat"
+                color="default"
                 size="lg"
                 startContent={<SourceCodeIcon />}
                 endContent={<span className="-ml-1 font-bold">Source</span>}
