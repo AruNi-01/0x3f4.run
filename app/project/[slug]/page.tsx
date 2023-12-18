@@ -27,7 +27,7 @@ export default function ProjectPage({ params }: { params: any }) {
         variant="light"
         size="sm"
         onClick={() => router.back()}
-        startContent={<BackIcon className="transition-all duration-500 group-hover/icon:-translate-x-1" />}
+        startContent={<BackIcon className="transition-all group-hover:duration-500 group-hover/icon:-translate-x-1" />}
         endContent={<span className="-ml-1 font-bold">Back</span>}
         className="group/icon hidden lg:flex"
       />

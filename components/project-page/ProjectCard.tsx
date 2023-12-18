@@ -29,7 +29,7 @@ export function ProjectCard(props: ProjectsProps) {
         <img
           src={coverImg}
           alt={name}
-          className="object-cover w-full h-full transition-all ease-in-out duration-1000 group-hover/img:scale-110"
+          className="object-cover w-full h-full transition-all ease-in-out group-hover:duration-1000 group-hover/img:scale-110"
         />
       </CardHeader>
       <CardBody className="z-50 dark:text-neutral-100 cursor-default">
@@ -54,7 +54,7 @@ export function ProjectCard(props: ProjectsProps) {
         )}
       </CardFooter>
       <motion.div
-        className="z-10 pointer-events-none absolute -inset-px blur-lg opacity-0 transition duration-500 group-hover/motion:opacity-100"
+        className="z-10 pointer-events-none absolute -inset-px blur-lg opacity-0 transition group-hover/motion:duration-1000 group-hover/motion:opacity-100"
         style={{
           background: useMotionTemplate`
             radial-gradient(

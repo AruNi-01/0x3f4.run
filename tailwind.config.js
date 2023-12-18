@@ -17,6 +17,7 @@ module.exports = {
         "bounce-slow-3500": "bounce 3.5s infinite",
         "slide-in-up-500": "slideInUp 0.5s ease-in",
         "slide-out-up-500": "slideOutUp 0.5s ease-out forwards",
+        "scale-3000": "scale 3s ease-in-out infinite",
       },
       keyframes: {
         bounce: {
@@ -47,6 +48,20 @@ module.exports = {
           to: {
             opacity: 0,
             transform: "translateY(-100%)",
+          },
+        },
+        scale: {
+          "0%": {
+            transform: "scale(1)",
+          },
+          "25%": {
+            transform: "scale(1.2)",
+          },
+          "50%": {
+            transform: "scale(1)",
+          },
+          "75%": {
+            transform: "scale(1.2)",
           },
         },
       },

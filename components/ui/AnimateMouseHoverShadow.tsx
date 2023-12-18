@@ -35,7 +35,7 @@ export default function AnimateMouseHoverShadow(props: AnimateMouseProps) {
   return (
     <motion.div
       className={cn(
-        "pointer-events-none absolute -inset-px blur-lg opacity-0 transition duration-500",
+        "pointer-events-none absolute -inset-px blur-lg opacity-0 transition group-hover:duration-500",
         `${zIndex}`,
         `group-hover/${groupName}:opacity-100`,
         `${className}`

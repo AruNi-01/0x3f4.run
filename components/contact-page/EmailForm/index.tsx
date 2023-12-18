@@ -143,12 +143,12 @@ export default function EmailForm() {
               <SendEmailIcon
                 width={14}
                 height={14}
-                className={`mr-1 transition-all duration-1000 ease-in-out lg:group-hover:translate-x-[116px] ${
+                className={`mr-1 transition-all group-hover:duration-1000 ease-in-out lg:group-hover:translate-x-[116px] ${
                   isSending ? "hidden" : ""
                 }`}
               />
               <div
-                className={`transition-all duration-1000 ease-in-out lg:group-hover:-translate-x-7 ${
+                className={`transition-all group-hover:duration-1000 ease-in-out lg:group-hover:-translate-x-7 ${
                   isSending ? "lg:translate-x-1" : ""
                 }`}
               >

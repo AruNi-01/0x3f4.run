@@ -1,9 +1,13 @@
+import LogoCarousel from "@/components/home-page/LogoCarousel";
 import MoreAboutMe from "@/components/home-page/MoreAboutMe";
 import MottoTyped from "@/components/home-page/MottoTyped";
 import { Footer } from "@/components/home-page/Sidebar/Footer";
 import TitleAnimation from "@/components/home-page/TitleAnimation";
 import TopTip from "@/components/home-page/TopTip";
+import { HeartIcon, OpenAiIcon } from "@/components/icons";
+import { logos } from "@/config/logos";
 import { siteConfig } from "@/config/site";
+import { Divider } from "@nextui-org/react";
 
 export default function Home() {
   return (
@@ -21,6 +25,13 @@ export default function Home() {
           <MottoTyped motto={siteConfig.homePage.mottoStr} />
         </h2>
       </div>
+      <h2 className="flex gap-2 -mb-7 text-default-400 dark:text-default-500 cursor-default">
+        <span>——————</span>
+        <span className="animate-scale-3000">{<HeartIcon />} </span>
+        <span>Thanks</span>
+        <span>——————</span>
+      </h2>
+      <LogoCarousel logos={logos} />
       <MoreAboutMe />
       <Footer className="lg:hidden absolute bottom-3" />
     </section>
