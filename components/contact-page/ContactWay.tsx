@@ -27,10 +27,10 @@ export default function ContactWay() {
   };
 
   return (
-    <div className="flex items-start justify-center gap-3 mt-2">
+    <div className="flex items-start justify-start flex-wrap gap-3 mt-2">
       {contactWays.map((contact) => (
         <Popover
-          key={contact.name}
+          key={contact.id}
           open={popoverState.find((_, index) => contactWays[index].id === contact.id)}
           handler={(isOpen) => {
             if (!contact.hasPopover) return;

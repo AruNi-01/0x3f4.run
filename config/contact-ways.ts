@@ -24,4 +24,11 @@ export const contactWays = [
     link: siteConfig.links.authTwitter,
     hasPopover: false,
   },
+  {
+    id: "4",
+    name: "GitHub",
+    icon: "/contact/github.svg",
+    link: siteConfig.links.authGitHub,
+    hasPopover: false,
+  },
 ];
