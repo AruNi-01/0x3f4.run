@@ -4,10 +4,9 @@ import MottoTyped from "@/components/home-page/MottoTyped";
 import { Footer } from "@/components/home-page/Sidebar/Footer";
 import TitleAnimation from "@/components/home-page/TitleAnimation";
 import TopTip from "@/components/home-page/TopTip";
-import { HeartIcon, OpenAiIcon } from "@/components/icons";
+import { HeartIcon } from "@/components/icons";
 import { logos } from "@/config/logos";
 import { siteConfig } from "@/config/site";
-import { Divider } from "@nextui-org/react";
 
 export default function Home() {
   return (
