@@ -15,6 +15,8 @@ module.exports = {
       animation: {
         "bounce-slow-2500": "bounce 2.5s infinite",
         "bounce-slow-3500": "bounce 3.5s infinite",
+        "slide-in-up-500": "slideInUp 0.5s ease-in",
+        "slide-out-up-500": "slideOutUp 0.5s ease-out forwards",
       },
       keyframes: {
         bounce: {
@@ -25,6 +27,26 @@ module.exports = {
           "50%": {
             transform: "translateY(0)",
             animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
+        slideInUp: {
+          "0%": {
+            transform: "translateY(100%)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+        },
+        slideOutUp: {
+          from: {
+            opacity: 1,
+            transform: "translateY(0)",
+          },
+          to: {
+            opacity: 0,
+            transform: "translateY(-100%)",
           },
         },
       },

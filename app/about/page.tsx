@@ -5,6 +5,7 @@ import OtherSite from "@/components/about-page/OtherSite";
 import TechStack from "@/components/about-page/TechStack";
 import H1Title from "@/components/ui/H1Title";
 import H2Title from "@/components/ui/H2Title";
+import { techStacks } from "@/config/tech-stacks";
 import { Divider } from "@nextui-org/react";
 
 export default function AboutPage() {
@@ -20,7 +21,7 @@ export default function AboutPage() {
       <LifeTimeline />
       <Divider />
       <H2Title>Tech stack</H2Title>
-      <TechStack />
+      <TechStack techStacks={techStacks} />
     </section>
   );
 }

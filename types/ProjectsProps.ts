@@ -1,3 +1,5 @@
+import { TechStacksProps } from "./TechStacksProps";
+
 export interface ProjectsProps {
   name: string;
   shortIntro: string;
@@ -6,9 +8,5 @@ export interface ProjectsProps {
   previewLink?: string;
   sourceLink?: string;
   slug: string;
-  techStacks?: {
-    name: string;
-    icon: string;
-    src: string;
-  }[];
+  techStacks?: TechStacksProps[];
 }
