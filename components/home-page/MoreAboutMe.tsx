@@ -11,7 +11,11 @@ export default function MoreAboutMe() {
 
   const meRef = useRef<any>();
   useEffect(() => {
-    meRef.current?.goToAndStop(285, true);
+    meRef.current?.play();
+    setTimeout(() => {
+      meRef.current?.stop();
+      meRef.current?.goToAndStop(285, true);
+    }, 4000);
   }, []);
 
   return (
