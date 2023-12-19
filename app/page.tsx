@@ -48,6 +48,7 @@ export default function Home() {
         {navCards.map(
           ({ animateIcon, animationStopFrame, firstPlayTime, title, description, buttonText, buttonLink }) => (
             <NavCard
+              key={title}
               animateIcon={animateIcon}
               animationStopFrame={animationStopFrame}
               firstPlayTime={firstPlayTime}
