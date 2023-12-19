@@ -12,7 +12,7 @@ export default function TopTip() {
         href={siteConfig.links.repo}
         className="flex py-1 px-1 pe-4 text-sm text-black/80 bg-blue-100 rounded-full dark:bg-blue-800 dark:text-white/80 hover:bg-blue-200 dark:hover:bg-blue-900"
       >
-        <span className="text-xs bg-blue-500 dark:bg-blue-950 rounded-full flex gap-2 text-white/80 px-4 py-1.5 me-3">
+        <span className="text-xs bg-blue-400 dark:bg-blue-950 rounded-full flex gap-2 text-white/80 px-4 py-1.5 me-3">
           <CongratulationIcon />
           <p className="font-medium">Hey</p>
         </span>
