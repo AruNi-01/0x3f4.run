@@ -1,12 +1,32 @@
-import LogoCarousel from "@/components/home-page/LogoCarousel";
-import MoreAboutMe from "@/components/home-page/MoreAboutMe";
 import MottoTyped from "@/components/home-page/MottoTyped";
+import NavCard from "@/components/home-page/NavCard";
 import { Footer } from "@/components/home-page/Sidebar/Footer";
 import TitleAnimation from "@/components/home-page/TitleAnimation";
 import TopTip from "@/components/home-page/TopTip";
-import { HeartIcon } from "@/components/icons";
-import { logos } from "@/config/logos";
+import { navCards } from "@/config/nav-cards";
 import { siteConfig } from "@/config/site";
+import { Metadata, Viewport } from "next";
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+};
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.name,
+    template: `%s - ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+
+  icons: {
+    icon: siteConfig.browserIcon,
+    shortcut: siteConfig.browserIcon,
+    apple: siteConfig.browserIcon,
+  },
+};
 
 export default function Home() {
   return (
@@ -24,15 +44,22 @@ export default function Home() {
           <MottoTyped motto={siteConfig.homePage.mottoStr} />
         </h2>
       </div>
-      <h2 className="flex gap-2 -mb-7 text-default-400 dark:text-default-500 cursor-default">
-        <span>——————</span>
-        <span className="animate-scale-3000">{<HeartIcon />} </span>
-        <span>Thanks</span>
-        <span>——————</span>
-      </h2>
-      <LogoCarousel logos={logos} />
-      <MoreAboutMe />
-      <Footer className="lg:hidden absolute bottom-3" />
+      <div className="grid place-items-start gap-5 lg:grid-cols-2 mx-4">
+        {navCards.map(
+          ({ animateIcon, animationStopFrame, firstPlayTime, title, description, buttonText, buttonLink }) => (
+            <NavCard
+              animateIcon={animateIcon}
+              animationStopFrame={animationStopFrame}
+              firstPlayTime={firstPlayTime}
+              title={title}
+              description={description}
+              buttonText={buttonText}
+              buttonLink={buttonLink}
+            />
+          )
+        )}
+      </div>
+      <Footer className="lg:hidden" />
     </section>
   );
 }
