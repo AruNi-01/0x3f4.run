@@ -7,7 +7,7 @@ import { Link } from "@nextui-org/link";
 export default function WebsitePage() {
   return (
     <section className="flex flex-col justify-around items-center gap-10">
-      <h1>Website Page</h1>
+      <h1 className="text-2xl font-bold">Website Page, Coming soon</h1>
       <Button as={Link} href="/" color="primary">
         Back Home
       </Button>
