@@ -280,21 +280,13 @@ export const FailIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   );
 };
 
-export const SiteIcon: React.FC<IconSvgProps> = ({ ...props }) => {
+export const UpdateIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1024 1024"
-      version="1.1"
-      p-id="4591"
-      width="20"
-      height="20"
-      {...props}
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width={14} height={14} {...props}>
       <path
-        d="M736 864H288c-17.6 0-32 14.4-32 32s14.4 32 32 32h448c17.6 0 32-14.4 32-32s-14.4-32-32-32zM832 96H192c-70.4 0-128 57.6-128 128v416c0 70.4 57.6 128 128 128h640c70.4 0 128-57.6 128-128V224c0-70.4-57.6-128-128-128zM576 544c0 17.6-14.4 32-32 32H288c-17.6 0-32-14.4-32-32s14.4-32 32-32h256c17.6 0 32 14.4 32 32z m192-224c0 17.6-14.4 32-32 32H288c-17.6 0-32-14.4-32-32s14.4-32 32-32h448c17.6 0 32 14.4 32 32z"
-        p-id="4592"
-        fill="currentColor"
+        fillRule="evenodd"
+        d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z"
+        clipRule="evenodd"
       />
     </svg>
   );

@@ -16,6 +16,8 @@ module.exports = {
         "bounce-slow-2500": "bounce 2.5s infinite",
         "bounce-slow-3500": "bounce 3.5s infinite",
         "slide-in-up-500": "slideInUp 0.5s ease-in",
+        "slide-in-up-1000": "slideInUp 1s ease-in",
+        "slide-in-up-1500": "slideInUp 1.5s ease-in",
         "slide-out-up-500": "slideOutUp 0.5s ease-out forwards",
         "scale-3000": "scale 3s ease-in-out infinite",
       },
