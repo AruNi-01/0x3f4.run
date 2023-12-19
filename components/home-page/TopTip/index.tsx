@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 
 export default function TopTip() {
   return (
-    <div className={`px-4 mx-auto max-w-screen-xl text-center ${style.floatingY}`}>
+    <div className={`px-4 mx-auto max-w-screen-xl text-center mt-3 ${style.floatingY}`}>
       <Button
         as={Link}
         href={siteConfig.links.repo}
