@@ -12,7 +12,7 @@ export default function NotFoundPage() {
       <div className="flex flex-col gap-3 md:w-1/3">
         <span className="font-bold text-4xl animate-slide-in-up-500">Oops!</span>
         <span className="text-neutral-500 text-lg animate-slide-in-up-1000">
-          Website can't seem to find the page you are looking for.
+          Website can&apos;t seem to find the page you are looking for.
         </span>
         <Button
           as={Link}
