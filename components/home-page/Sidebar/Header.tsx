@@ -6,7 +6,7 @@ import EmploymentState from "./EmploymentState";
 
 export default function Header({ className }: { className?: string }) {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 animate-slide-in-to-down-1000">
       <div className="flex justify-between items-center">
         <User
           className={className}

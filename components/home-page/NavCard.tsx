@@ -36,7 +36,7 @@ export default function NavCard({
         lottieRef.current?.stop();
         lottieRef.current?.goToAndStop(animationStopFrame, true);
       }}
-      className="mt-6 border border-neutral-100 dark:border-neutral-800 dark:bg-neutral-900"
+      className="mt-6 border border-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 animate-slide-in-to-up-1000"
     >
       <CardBody>
         <Lottie

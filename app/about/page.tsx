@@ -10,7 +10,7 @@ import { Divider } from "@nextui-org/react";
 
 export default function AboutPage() {
   return (
-    <section className="flex flex-col items-start justify-center gap-4 lg:mx-0 mx-7">
+    <section className="flex flex-col items-start justify-center gap-4 lg:mx-0 mx-7 animate-slide-in-from-right-800">
       <H1Title>About me</H1Title>
       <AboutContent />
       <Divider />

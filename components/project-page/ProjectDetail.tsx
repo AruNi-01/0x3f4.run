@@ -13,7 +13,7 @@ export default function ProjectDetail(props: ProjectsProps) {
   const [isImgHoverAnimation, setIsImgHoverAnimation] = useState(false);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 animate-slide-in-to-up-1000">
       <H1Title className="mb-4">{name}</H1Title>
       <figure
         className="relative group/img"
@@ -52,7 +52,7 @@ export default function ProjectDetail(props: ProjectsProps) {
                 size="lg"
                 startContent={<PreviewIcon />}
                 endContent={<span className="-ml-1 font-bold">Preview</span>}
-                className={`${isImgHoverAnimation ? "animate-slide-in-up-500" : "animate-slide-out-up-500"}`}
+                className={`${isImgHoverAnimation ? "animate-slide-in-to-up-500" : "animate-slide-out-to-up-500"}`}
               />
             )}
             {sourceLink && (
@@ -65,7 +65,7 @@ export default function ProjectDetail(props: ProjectsProps) {
                 size="lg"
                 startContent={<SourceCodeIcon />}
                 endContent={<span className="-ml-1 font-bold">Source</span>}
-                className={`${isImgHoverAnimation ? "animate-slide-in-up-500" : "animate-slide-out-up-500"}`}
+                className={`${isImgHoverAnimation ? "animate-slide-in-to-up-500" : "animate-slide-out-to-up-500"}`}
               />
             )}
           </figcaption>

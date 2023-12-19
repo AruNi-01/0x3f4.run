@@ -164,7 +164,7 @@ export default function EmailForm() {
               />
             </Button>
           </PopoverTrigger>
-          <PopoverContent>
+          <PopoverContent className="animate-slide-in-to-up-1000">
             <SendedTip isSuccess={isSendSuccess} onCloseHandle={() => setIsSendTipOpen(false)} />
           </PopoverContent>
         </Popover>

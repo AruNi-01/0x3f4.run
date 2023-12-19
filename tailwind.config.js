@@ -15,10 +15,16 @@ module.exports = {
       animation: {
         "bounce-slow-2500": "bounce 2.5s infinite",
         "bounce-slow-3500": "bounce 3.5s infinite",
-        "slide-in-up-500": "slideInUp 0.5s ease-in",
-        "slide-in-up-1000": "slideInUp 1s ease-in",
-        "slide-in-up-1500": "slideInUp 1.5s ease-in",
-        "slide-out-up-500": "slideOutUp 0.5s ease-out forwards",
+        "slide-in-to-up-500": "slideInUp 0.5s ease-in",
+        "slide-in-to-up-1000": "slideInUp 1s ease-in",
+        "slide-in-to-up-1500": "slideInUp 1.5s ease-in",
+        "slide-in-to-down-1000": "slideInDown 1s ease-in",
+        "slide-in-to-down-2000": "slideInDown 2s ease-in",
+        "slide-in-from-left-500": "slideInLeft 0.5s ease-in",
+        "slide-in-from-left-1000": "slideInLeft 1s ease-in",
+        "slide-in-from-right-800": "slideInRight 0.8s ease-in",
+        "slide-in-from-right-1000": "slideInRight 1s ease-in",
+        "slide-out-to-up-500": "slideOutUp 0.5s ease-out forwards",
         "scale-3000": "scale 3s ease-in-out infinite",
       },
       keyframes: {
@@ -39,6 +45,36 @@ module.exports = {
           },
           "100%": {
             transform: "translateY(0)",
+            opacity: 1,
+          },
+        },
+        slideInDown: {
+          "0%": {
+            transform: "translateY(-100%)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: 1,
+          },
+        },
+        slideInLeft: {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: 1,
+          },
+        },
+        slideInRight: {
+          "0%": {
+            transform: "translateX(100%)",
+            opacity: 0,
+          },
+          "100%": {
+            transform: "translateX(0)",
             opacity: 1,
           },
         },
