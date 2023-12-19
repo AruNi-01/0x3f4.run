@@ -39,6 +39,12 @@ export const logos: LogoCarouselProps[] = [
     href: "https://flowbite.com",
   },
   {
+    name: "Material Tailwind",
+    description: "Material Design UI Kit Tailwind CSS",
+    src: "logo/material-tailwind.svg",
+    href: "https://material-tailwind.com",
+  },
+  {
     name: "Framer Motion",
     description: "A production-ready motion library for React.",
     src: "/logo/framer-motion.svg",
@@ -49,6 +55,12 @@ export const logos: LogoCarouselProps[] = [
     description: "Library for Android, iOS, Web, and Windows that parses Adobe After Effects animations.",
     src: "/logo/lottie.svg",
     href: "https://airbnb.io/lottie/",
+  },
+  {
+    name: "LottieFiles",
+    description: "LottieFiles is a collection of animations designed for Lottie",
+    src: "/logo/lottiefiles.svg",
+    href: "https://lottiefiles.com/",
   },
   {
     name: "Vercel",
