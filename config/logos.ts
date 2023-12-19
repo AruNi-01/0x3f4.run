@@ -56,10 +56,4 @@ export const logos: LogoCarouselProps[] = [
     src: "/logo/vercel.svg",
     href: "https://vercel.com",
   },
-  {
-    name: "OpenAI",
-    description: "OpenAI is an AI research and deployment company.",
-    src: "/logo/openai.svg",
-    href: "https://openai.com",
-  },
 ];

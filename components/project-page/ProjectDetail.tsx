@@ -26,7 +26,7 @@ export default function ProjectDetail(props: ProjectsProps) {
         }}
         onMouseLeave={() => {
           setIsImgHoverAnimation(false);
-          // delay 500ms to wait for the out animation finish
+          // delay 500ms to wait for the slide-out-up animation finish
           setTimeout(() => {
             setIsImgHover(false);
           }, 500);
@@ -71,7 +71,8 @@ export default function ProjectDetail(props: ProjectsProps) {
           </figcaption>
         )}
       </figure>
-      <div className="font-medium opacity-80">{detailIntro}</div>
+      <span className="self-center text-neutral-400 dark:text-neutral-500 text-sm -mt-3">Click/Hover get preview or source code</span>
+      <div className="font-medium opacity-80">{detailIntro}di</div>
       {techStacks && (
         <>
           <Divider />

@@ -11,7 +11,7 @@ export default function LifeTimeline() {
       <Timeline>
         <TimelineItem className="h-28 w-80">
           <TimelineConnector isActive={true} className="!w-[78px]" />
-          <TimelineHeader className="transition ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4  shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
+          <TimelineHeader className="transition hover:duration-1000 ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4  shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
             <TimelineIcon className="p-3" variant="ghost" color="red">
               <BornIcon />
             </TimelineIcon>
@@ -27,7 +27,7 @@ export default function LifeTimeline() {
         </TimelineItem>
         <TimelineItem className="h-28">
           <TimelineConnector className="!w-[78px]" />
-          <TimelineHeader className="transition ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4 shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
+          <TimelineHeader className="transition hover:duration-1000 ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4 shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
             <TimelineIcon className="p-3" variant="ghost" color="blue">
               <UniversityIcon />
             </TimelineIcon>
@@ -46,7 +46,7 @@ export default function LifeTimeline() {
           </TimelineHeader>
         </TimelineItem>
         <TimelineItem className="h-28 animate-bounce-slow-2500">
-          <TimelineHeader className="transition ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4  shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
+          <TimelineHeader className="transition hover:duration-1000 ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4  shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
             <TimelineIcon className="p-3" variant="ghost" color="green">
               <FutureIcon />
             </TimelineIcon>
