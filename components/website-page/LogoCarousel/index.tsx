@@ -8,7 +8,11 @@ export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) 
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme === "dark" ? "slider-dark" : "slider"}`}>
+    <div
+      className={`${
+        theme === "dark" ? "slider-dark animate-slide-in-from-right-1000" : "slider animate-slide-in-from-right-1000"
+      }`}
+    >
       <div className="slide-track">
         {logos.map((logo) => (
           <div className="slide" key={logo.name}>

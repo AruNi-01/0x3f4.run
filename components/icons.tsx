@@ -59,6 +59,22 @@ export const VercelIcon: React.FC<IconSvgProps> = ({ width, height = 44, ...prop
   );
 };
 
+export const VercelIcon2: React.FC<IconSvgProps> = ({ ...props }) => {
+  return (
+    <svg
+      viewBox="0 0 1024 1024"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      p-id="4237"
+      width="18"
+      height="18"
+      {...props}
+    >
+      <path d="M512 60l512 904H0z" fill="black" p-id="4238"></path>
+    </svg>
+  );
+};
+
 export const BackIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   return (
     <svg
