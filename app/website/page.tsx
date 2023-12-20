@@ -8,10 +8,10 @@ import { logos } from "@/config/logos";
 
 export default function WebsitePage() {
   return (
-    <section className="flex flex-col justify-between items-center gap-10 mx-4 mb-2">
+    <section className="flex flex-col items-start lg:items-center justify-around gap-4 lg:mx-0 mx-7">
       <Header />
       <Mockup />
-      <h2 className="flex gap-2 -mb-7 text-default-400 dark:text-default-500 cursor-default animate-slide-in-from-right-1000">
+      <h2 className="flex gap-2 -mb-3 self-center text-default-400 dark:text-default-500 cursor-default animate-slide-in-from-right-1000">
         <span>——</span>
         <span className="animate-scale-3000">{<HeartIcon />} </span>
         <span>Built By</span>
@@ -19,7 +19,7 @@ export default function WebsitePage() {
       </h2>
       <LogoCarousel logos={logos} />
       <Content />
-      <Footer />
+      <Footer className="self-center mt-10 mb-2" />
     </section>
   );
 }

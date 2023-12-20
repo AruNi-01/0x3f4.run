@@ -3,7 +3,7 @@ import { Image } from "@nextui-org/react";
 
 export default function Mockup() {
   return (
-    <div className="rounded-xl transition-all hover:duration-1000 ease-in-out hover:scale-110 animate-slide-in-from-left-1000">
+    <div className="rounded-xl animate-slide-in-from-left-1000 mb-3 self-center">
       <Image
         src="/mockup/0x3f4-run_light_mockup.png"
         alt="mockup_light"
