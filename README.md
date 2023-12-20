@@ -16,7 +16,7 @@
 </p>
 <p>
   It &apos;s based on React, Next.js, Tailwind CSS, NextUI, Lottie Animation, and more. You can see them in the
-  logo display area above.
+  logo display area above. (<a src="https://0x3f4.run" target="_blank">Go to website to see</a>)
 </p>
 
 ## Feature
