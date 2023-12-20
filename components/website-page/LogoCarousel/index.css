@@ -1,0 +1,119 @@
+body {
+  min-height: 100vh;
+}
+.slider {
+  height: 60px;
+  position: relative;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.slider::before,
+.slider::after {
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100%;
+  width: 10%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slide-track {
+  width: calc(150px * 20);
+  display: flex;
+  animation: scroll 35s linear infinite;
+  justify-content: space-between;
+}
+
+.slide {
+  width: 150px;
+  height: 60px;
+
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.slide:hover {
+  transform: scale(1.08);
+}
+
+.slider:hover .slide-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-150px * 10));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slide-track {
+    width: calc(80px * 20);
+  }
+
+  .slide {
+    width: 80px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(calc(-80px * 10));
+    }
+  }
+}
+
+/* dark theme (fuck) */
+.slider-dark {
+  height: 60px;
+  position: relative;
+  width: 100%;
+
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.slider-dark::before,
+.slider-dark::after {
+  position: absolute;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  content: "";
+  height: 100%;
+  width: 10%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider-dark::before {
+  left: 0;
+  top: 0;
+}
+.slider-dark::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider-dark:hover .slide-track {
+  animation-play-state: paused;
+}

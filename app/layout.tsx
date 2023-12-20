@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const pathname = usePathname();
   const isWebsitePage = pathname === "/website";
   const commonMainCN = "container lg:w-2/3 max-w-[775px] justify-around items-center gap-4 mb-20 -mt-14";
-  const websiteMainCN = "container lg:w-4/5 justify-start items-center gap-4 mb-20 -mt-14";
+  const websiteMainCN = "container lg:w-4/5 justify-start items-center gap-4 -mt-14";
 
   const [isLoading, setIsLoading] = useState(true);
   // don't care me, just for show loading animation at first enter...
