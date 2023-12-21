@@ -64,7 +64,7 @@ export default function ContactWay() {
               variant="faded"
               className="text-neutral-800 dark:text-neutral-300"
             >
-              <img src={contact.icon} alt={contact.name} />
+              <Image src={contact.icon} alt={contact.name} radius="none" />
               {contact.name}
             </Button>
           </PopoverHandler>

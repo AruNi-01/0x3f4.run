@@ -32,7 +32,7 @@ const MottoTyped = ({ motto }: { motto: string }) => {
     return () => {
       typed.current?.destroy();
     };
-  }, []);
+  }, [motto]);
 
   return <p className="inline-block" ref={pRef} />;
 };

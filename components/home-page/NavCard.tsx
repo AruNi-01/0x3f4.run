@@ -25,7 +25,7 @@ export default function NavCard({
       lottieRef.current?.stop();
       lottieRef.current?.goToAndStop(animationStopFrame, true);
     }, firstPlayTime);
-  }, []);
+  }, [animationStopFrame, firstPlayTime]);
 
   return (
     <Card

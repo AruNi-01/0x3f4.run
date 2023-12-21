@@ -2,6 +2,7 @@
 import { ProjectsProps } from "@/types/ProjectsProps";
 import { Card, CardBody, CardFooter, CardHeader, Typography } from "@material-tailwind/react";
 import { Button, Divider, Image, Link } from "@nextui-org/react";
+import NextImage from "next/image";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTheme } from "next-themes";
 import { DarkMouseShadowColors, LightMouseShadowColors } from "../constants";
@@ -25,10 +26,15 @@ export function ProjectCard(props: ProjectsProps) {
       }}
       className="group/motion flex dark:bg-neutral-900"
     >
-      <CardHeader color="blue-gray" className="border border-neutral-100 dark:border-neutral-700 group/img z-50 h-44 relative">
-        <img
+      <CardHeader
+        color="blue-gray"
+        className="border border-neutral-100 dark:border-neutral-700 group/img z-50 h-44 relative"
+      >
+        <NextImage
           src={coverImg}
           alt={name}
+          width={1000}
+          height={1000}
           className="object-cover w-full h-full transition-all ease-in-out group-hover:duration-1000 group-hover/img:scale-110"
         />
       </CardHeader>

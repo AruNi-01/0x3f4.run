@@ -3,6 +3,7 @@ import { LogoCarouselProps } from "@/types/LogoCarouselProps";
 import { Link } from "@nextui-org/link";
 import "./index.css";
 import { useTheme } from "next-themes";
+import { Image } from "@nextui-org/react";
 
 export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) {
   const { theme } = useTheme();
@@ -18,7 +19,7 @@ export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) 
           <div className="slide" key={logo.name}>
             <Link isExternal color="foreground" href={logo.href} className="flex gap-2">
               {logo.src !== "" ? (
-                <img src={logo.src} alt={logo.name} width={44} height={44} />
+                <Image src={logo.src} alt={logo.name} width={44} height={44} radius="sm" />
               ) : (
                 <span className="font-bold text-xl">{logo.name}</span>
               )}
@@ -31,7 +32,7 @@ export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) 
           <div className="slide" key={logo.name}>
             <Link isExternal color="foreground" href={logo.href} className="flex gap-2">
               {logo.src !== "" ? (
-                <img src={logo.src} alt={logo.name} width={44} height={44} />
+                <Image src={logo.src} alt={logo.name} width={44} height={44} radius="sm" />
               ) : (
                 <span className="font-bold text-xl">{logo.name}</span>
               )}
@@ -43,7 +44,7 @@ export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) 
             <div className="slide" key={logo.name}>
               <Link isExternal color="foreground" href={logo.href} className="flex gap-2">
                 {logo.src !== "" ? (
-                  <img src={logo.src} alt={logo.name} width={44} height={44} />
+                  <Image src={logo.src} alt={logo.name} width={44} height={44} radius="sm" />
                 ) : (
                   <span className="font-bold text-xl">{logo.name}</span>
                 )}

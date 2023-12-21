@@ -1,5 +1,6 @@
 import { ProjectsProps } from "@/types/ProjectsProps";
 import { Button, Divider, Link, cn } from "@nextui-org/react";
+import NextImage from "next/image";
 import { useState } from "react";
 import TechStack from "../about-page/TechStack";
 import { PreviewIcon, SourceCodeIcon } from "../icons";
@@ -32,9 +33,11 @@ export default function ProjectDetail(props: ProjectsProps) {
           }, 500);
         }}
       >
-        <img
+        <NextImage
           src={coverImg}
           alt={name}
+          width={1000}
+          height={1000}
           className={cn(
             "shadow-xl border dark:border-neutral-600 rounded-xl transition ease-in-out",
             isImgHoverAnimation ? "blur-sm duration-1000" : "blur-none duration-1000"
@@ -71,7 +74,9 @@ export default function ProjectDetail(props: ProjectsProps) {
           </figcaption>
         )}
       </figure>
-      <span className="self-center text-neutral-400 dark:text-neutral-500 text-sm -mt-3">Click/Hover get preview or source code</span>
+      <span className="self-center text-neutral-400 dark:text-neutral-500 text-sm -mt-3">
+        Click/Hover get preview or source code
+      </span>
       <div className="font-medium opacity-80">{detailIntro}di</div>
       {techStacks && (
         <>
