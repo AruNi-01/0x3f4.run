@@ -99,7 +99,7 @@ export default function ContactWay() {
                 ""
               )}
               {contact.qrCode ? (
-                <Image src={contact.qrCode} radius="none" className="rounded-bl-xl rounded-br-xl" />
+                <Image src={contact.qrCode} alt={contact.name} radius="none" className="rounded-bl-xl rounded-br-xl" />
               ) : (
                 ""
               )}
