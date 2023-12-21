@@ -193,9 +193,17 @@ export const FutureIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   );
 };
 
-export const CongratulationIcon: React.FC<IconSvgProps> = ({ ...props }) => {
+export const CongratulationIcon: React.FC<IconSvgProps> = ({ className }: { className?: string }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" version="1.1" p-id="25013" width="18" height="18">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1024 1024"
+      version="1.1"
+      p-id="25013"
+      width="16"
+      height="16"
+      className={className}
+    >
       <path
         d="M800.479218 694.613322l-167.259836 99.201903L131.353872 934.859087l-21.23198-21.261979-21.105979-21.16398 139.947863-499.827511 113.953889-156.341848 221.443784 221.833784z"
         fill="#CE4963"
