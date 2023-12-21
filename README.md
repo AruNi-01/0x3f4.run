@@ -25,7 +25,7 @@
 - Adapt desktop and mobile devices
 - Next.js app router and api router feature
 - More configuration, less code (data/code splitting...)
-- coming soon...
+- Cache picture by redis (coming soon...)
 
 ## Usage
 

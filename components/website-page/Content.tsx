@@ -33,7 +33,7 @@ export default function Content() {
         <Checkbox isReadOnly value="4">
           More configuration, less code {"(data/code splitting...)"}
         </Checkbox>
-        <Checkbox value="5">coming soon...</Checkbox>
+        <Checkbox value="5">Cache picture by redis {"coming soon..."}</Checkbox>
       </CheckboxGroup>
       <H2Title className="font-bold">Usage</H2Title>
       <span className="space-y-2">
