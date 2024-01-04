@@ -12,7 +12,7 @@ export default function ProjectPage({ params }: { params: any }) {
 
   const project = projects.find((project) => project.slug === slug);
   if (!project) {
-    return <NotFoundPage text="project" />;
+    return <NotFoundPage pathname="project" />;
   }
 
   return (
