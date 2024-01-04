@@ -1,4 +1,5 @@
 "use client";
+import NotFoundPage from "@/app/not-found";
 import { BackIcon } from "@/components/icons";
 import ProjectDetail from "@/components/project-page/ProjectDetail";
 import { projects } from "@/config/projects";
@@ -11,14 +12,7 @@ export default function ProjectPage({ params }: { params: any }) {
 
   const project = projects.find((project) => project.slug === slug);
   if (!project) {
-    return (
-      <>
-        <h1 className="text-3xl font-bold text-start mb-4">Project Not Found</h1>
-        <Button variant="light" onClick={() => router.replace("/project")}>
-          {"< Back Project"}
-        </Button>
-      </>
-    );
+    return <NotFoundPage text="project" />;
   }
 
   return (
@@ -27,7 +21,9 @@ export default function ProjectPage({ params }: { params: any }) {
         variant="light"
         size="sm"
         onClick={() => router.back()}
-        startContent={<BackIcon className="transition-all group-hover/icon:duration-1000 ease-in-out group-hover/icon:-translate-x-1" />}
+        startContent={
+          <BackIcon className="transition-all group-hover/icon:duration-1000 ease-in-out group-hover/icon:-translate-x-1" />
+        }
         endContent={<span className="-ml-1 font-bold">Back</span>}
         className="group/icon hidden lg:flex"
       />

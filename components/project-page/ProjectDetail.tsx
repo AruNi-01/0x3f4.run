@@ -77,7 +77,7 @@ export default function ProjectDetail(props: ProjectsProps) {
       <span className="self-center text-neutral-400 dark:text-neutral-500 text-sm -mt-3">
         Click/Hover get preview or source code
       </span>
-      <div className="font-medium opacity-80">{detailIntro}di</div>
+      <div className="font-medium opacity-80">{detailIntro}</div>
       {techStacks && (
         <>
           <Divider />
