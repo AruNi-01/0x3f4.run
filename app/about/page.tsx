@@ -7,6 +7,11 @@ import H1Title from "@/components/ui/H1Title";
 import H2Title from "@/components/ui/H2Title";
 import { techStacks } from "@/config/tech-stacks";
 import { Divider } from "@nextui-org/react";
+// import { Metadata } from "next";
+
+// export const metadata: Metadata = {
+//   title: "About",
+// };
 
 export default function AboutPage() {
   return (

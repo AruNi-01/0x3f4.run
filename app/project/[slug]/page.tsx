@@ -6,7 +6,7 @@ import { projects } from "@/config/projects";
 import { Button } from "@nextui-org/button";
 import { useRouter } from "next/navigation";
 
-export default function ProjectPage({ params }: { params: any }) {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
   const router = useRouter();
 
