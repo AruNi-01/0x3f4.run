@@ -51,4 +51,15 @@ export const projects: ProjectsProps[] = [
       },
     ],
   },
+  {
+    name: "LeetCode Archive",
+    shortIntro: "LeetCode problems archive, include swordfinger offer, leetcode hot 100, codetop 100, sort algo etc.",
+    detailIntro:
+      "LeetCode problems archive, include swordfinger offer, leetcode hot 100, codetop 100, sort algo etc. It has two versions, one is based on Wolai: https://www.wolai.com/aruni/fKuL9hqz8MhXqvcHrn31uF, and the other is based on Notion: https://aarynlu.notion.site/LeetCode-5e748f5f012743ae97b12a93908c9e58?pvs=4",
+    coverImg: "/project/leetcode-archive.png",
+    previewLink: "https://www.wolai.com/aruni/fKuL9hqz8MhXqvcHrn31uF",
+    sourceLink: "",
+    slug: "leetcode-archive",
+    techStacks: [],
+  },
 ];
