@@ -50,4 +50,4 @@
 
 ## Star History
 
-<iframe style="width:100%;height:auto;min-width:600px;min-height:400px;" src="https://star-history.com/embed?secret=Z2hwX0g3SFNwbHE3Z1RQS25CcEdTZDI3enprVlBJUFJ3YTAwS3NWdw==#AruNi-01/0x3f4.run&Date" frameBorder="0"></iframe>
+[![Star History Chart](https://api.star-history.com/svg?repos=AruNi-01/0x3f4.run&type=Date)](https://star-history.com/#AruNi-01/0x3f4.run&Date)
