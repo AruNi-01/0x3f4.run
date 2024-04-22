@@ -17,6 +17,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   return (
     <section className="flex flex-col items-start justify-center gap-6 lg:mx-0 mx-7">
+      <title>Project | 0x3f4.run</title>
       <Button
         variant="light"
         size="sm"

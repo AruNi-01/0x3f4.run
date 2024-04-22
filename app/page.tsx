@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <section className="flex flex-col justify-around w-full items-center gap-10">
+      <title>AarynLu | 0x3f4.run</title>
       <TopTip />
       <div className="inline-block w-full text-center justify-center animate-slide-in-from-right-1000">
         <div className="hidden lg:block min-w-[538px]">

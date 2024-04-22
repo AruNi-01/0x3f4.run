@@ -9,6 +9,7 @@ import { logos } from "@/config/logos";
 export default function WebsitePage() {
   return (
     <section className="flex flex-col items-start lg:items-center justify-around gap-4 lg:mx-0 mx-7">
+      <title>Website | 0x3f4.run</title>
       <Header />
       <Mockup />
       <h2 className="flex gap-2 -mb-3 self-center text-default-400 dark:text-default-500 cursor-default animate-slide-in-from-right-1000">
