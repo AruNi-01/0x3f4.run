@@ -47,3 +47,7 @@
 1. Go to github, fork this repo on your account.
 2. Go to vercel, login and import this repo, or click right button to deploy. <a style="display: inline-block;" href="https://vercel.com/new/clone?demo-title=Vuepress&amp;demo-description=Vue-powered%20Static%20Site%20Generator&amp;demo-url=https%3A%2F%2Fvuepress-starter-template.vercel.app%2F&amp;demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F1umwsLFT0iuxtmqqVQvV26%2Fba666c531fe100a30c72f2d638193f05%2F678f323f-23b8-44c1-b65f-8dad78ba083c.png&amp;project-name=Vuepress&amp;repository-name=vuepress&amp;repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fvercel%2Ftree%2Fmain%2Fexamples%2Fvuepress&amp;from=templates&amp;skippable-integrations=1" target="_blank"><img src="https://vercel.com/button" alt="Deploy with Vercel" /></a>
 3. Waiting done!
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=AruNi-01/0x3f4.run&type=Date)](https://star-history.com/#AruNi-01/0x3f4.run&Date)
