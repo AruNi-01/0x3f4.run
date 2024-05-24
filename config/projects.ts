@@ -34,6 +34,58 @@ export const projects: ProjectsProps[] = [
     ],
   },
   {
+    name: "PromptRun",
+    shortIntro: "Make using LLMs easier, more efficient, and more in line with expectations.",
+    detailIntro:
+      "An AIGC (Artificial Intelligence Generated Content) prompt trading platform. Here, you can buy and sell high-quality prompts to provide inspiration and guidance for your creative, writing, and other AI-generated content tasks.",
+    coverImg: "/project/promptrun.png",
+    previewLink: "https://promptrun.0x3f4.run",
+    sourceLink: "https://github.com/aruni-01/promptrun",
+    slug: "promptrun",
+    techStacks: [
+      {
+        name: "React",
+        src: "/tech/react.svg",
+        href: "https://react.org/",
+      },
+      {
+        name: "Next.js",
+        src: "/tech/nextjs.svg",
+        href: "https://nextjs.org/",
+      },
+      {
+        name: "Tailwind CSS",
+        src: "/tech/tailwindcss.svg",
+        href: "https://tailwindcss.com/",
+      },
+      {
+        name: "TypeScript",
+        src: "/tech/typescript.svg",
+        href: "https://www.typescriptlang.org/",
+      },
+      {
+        name: "Golang",
+        src: "/tech/golang.svg",
+        href: "https://go.dev/",
+      },
+      {
+        name: "MySQL",
+        src: "/tech/mysql.svg",
+        href: "https://www.mysql.com/",
+      },
+      {
+        name: "Redis",
+        src: "/tech/redis.svg",
+        href: "https://redis.io/",
+      },
+      {
+        name: "Kafka",
+        src: "/tech/kafka.svg",
+        href: "https://kafka.apache.org/",
+      },
+    ],
+  },
+  {
     name: "Wolai2Notion",
     shortIntro:
       "A Python tool for transferring Wolai to Notion, supporting most types of Block, and conversion of Database and Page.",
