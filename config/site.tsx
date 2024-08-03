@@ -66,6 +66,7 @@ export const siteConfig = {
     nextjs: "https://nextjs.org",
     tailwindcss: "https://tailwindcss.com",
     wit: "https://www.wit.edu.cn/",
+    hellobike: "https://www.hello-inc.com/index.html",
     vercel: "https://www.vercel.com",
     authGitHub: "https://github.com/AruNi-01",
     authTwitter: "https://twitter.com/AruNi_Lu",

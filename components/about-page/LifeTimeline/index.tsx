@@ -1,7 +1,7 @@
 import AnimateLink from "@/components/ui/AnimateLink";
 import AnimatePing from "@/components/ui/AnimatePing";
 import { Timeline, TimelineHeader, TimelineIcon, TimelineItem, Typography } from "@material-tailwind/react";
-import { BornIcon, FutureIcon, UniversityIcon } from "../../icons";
+import { BornIcon, FutureIcon, HellobikeIcon, UniversityIcon } from "../../icons";
 import TimelineConnector from "./TimelineConnector";
 import { siteConfig } from "@/config/site";
 
@@ -26,9 +26,9 @@ export default function LifeTimeline() {
           </TimelineHeader>
         </TimelineItem>
         <TimelineItem className="h-28">
-          <TimelineConnector className="!w-[78px]" />
+          <TimelineConnector isActive={true} className="!w-[78px]" />
           <TimelineHeader className="transition hover:duration-1000 ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4 shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
-            <TimelineIcon className="p-3" variant="ghost" color="blue">
+            <TimelineIcon className="p-3" variant="ghost" color="purple">
               <UniversityIcon />
             </TimelineIcon>
             <div className="flex flex-col gap-1">
@@ -39,10 +39,29 @@ export default function LifeTimeline() {
                 </AnimateLink>
               </Typography>
               <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
-                September 2020 — Present
+                September 2020 — June 2024
               </Typography>
             </div>
-            <AnimatePing color="primary" size="3" className="flex ml-8" />
+          </TimelineHeader>
+        </TimelineItem>
+        <TimelineItem className="h-28">
+          <TimelineConnector className="!w-[78px]" />
+          <TimelineHeader className="transition hover:duration-1000 ease-in-out hover:scale-105 relative rounded-xl border border-neutral-200 bg-neutral-100 dark:border-neutral-800 dark:bg-neutral-900 py-3 pl-4 shadow-lg shadow-neutral-300 dark:shadow-neutral-900">
+            <TimelineIcon className="p-3" variant="ghost" color="blue">
+              <HellobikeIcon />
+            </TimelineIcon>
+            <div className="flex flex-col gap-1">
+              <Typography variant="h6" color="blue-gray">
+                Back-end dev in{" "}
+                <AnimateLink href={siteConfig.links.hellobike} isExternal={true} className="text-primary">
+                  Hellobike
+                </AnimateLink>
+              </Typography>
+              <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
+                July 2024 — Present
+              </Typography>
+            </div>
+            <AnimatePing color="primary" size="3" className="flex ml-[12px]" />
           </TimelineHeader>
         </TimelineItem>
         <TimelineItem className="h-28 animate-bounce-slow-2500">
