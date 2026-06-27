@@ -1,11 +1,15 @@
+"use client";
+
 import AnimateArrow from "@/components/ui/AnimateArrow";
 import { otherSites } from "@/config/other-sites";
 import infinity from "@/public/lottie/infinity.json";
 import { Button } from "@nextui-org/button";
 import { Image, Link } from "@nextui-org/react";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import { useRef } from "react";
 import style from "./index.module.scss";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function OtherSite() {
   const infinityRef = useRef<any>();

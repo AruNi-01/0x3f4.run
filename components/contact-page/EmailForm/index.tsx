@@ -1,10 +1,14 @@
+"use client";
+
 import emailSend from "@/public/lottie/email-send.json";
 import { Input, Textarea } from "@nextui-org/input";
 import { Button, Popover, PopoverContent, PopoverTrigger } from "@nextui-org/react";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { SendEmailIcon } from "../../icons";
 import SendedTip from "./SendedTip";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function EmailForm() {
   const [nameValue, setNameValue] = useState("");

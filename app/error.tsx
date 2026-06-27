@@ -3,8 +3,10 @@ import { BackIcon, UpdateIcon } from "@/components/icons";
 import errorIcon from "@/public/lottie/error.json";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import { useEffect } from "react";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   useEffect(() => {

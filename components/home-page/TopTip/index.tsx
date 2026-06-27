@@ -4,10 +4,12 @@ import { siteConfig } from "@/config/site";
 import selebrationIcon from "@/public/lottie/celebration.json";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { CongratulationIcon } from "../../icons";
 import style from "./index.module.scss";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function TopTip() {
   const selebrationRef = useRef<any>();

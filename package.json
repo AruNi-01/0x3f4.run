@@ -31,6 +31,7 @@
     "@vercel/speed-insights": "^1.0.2",
     "autoprefixer": "10.4.16",
     "clsx": "^2.0.0",
+    "cobe": "^2.0.1",
     "eslint": "8.48.0",
     "eslint-config-next": "14.0.2",
     "framer-motion": "^10.16.4",

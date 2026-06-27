@@ -3,7 +3,9 @@ import { BackIcon } from "@/components/icons";
 import notFoundIcon from "@/public/lottie/not-found.json";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function NotFoundPage({ pathname }: { pathname?: string }) {
   return (

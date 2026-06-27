@@ -1,14 +1,16 @@
 "use client";
+import { NavCardProps } from "@/types/NavCardProps";
 import { Card, CardBody, CardFooter, Typography } from "@material-tailwind/react";
+import { Button } from "@nextui-org/button";
+import dynamic from "next/dynamic";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
 import { useEffect, useRef } from "react";
 import AnimateArrow from "../ui/AnimateArrow";
-import { Button } from "@nextui-org/button";
-import Lottie from "lottie-react";
-import { NavCardProps } from "@/types/NavCardProps";
-import { useTheme } from "next-themes";
-import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { DarkMouseShadowColors, LightMouseShadowColors } from "../constants";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function NavCard({
   animateIcon,
