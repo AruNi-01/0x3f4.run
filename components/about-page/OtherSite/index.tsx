@@ -7,11 +7,13 @@ import { Button } from "@nextui-org/button";
 import { Image, Link } from "@nextui-org/react";
 import dynamic from "next/dynamic";
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 import style from "./index.module.scss";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function OtherSite() {
+  const t = useTranslations();
   const infinityRef = useRef<any>();
   infinityRef.current?.setSpeed(0.7);
 
@@ -21,7 +23,7 @@ export default function OtherSite() {
     >
       <div className="flex items-center gap-2 mb-3 text-lg font-semibold text-gray-900 dark:text-neutral-400">
         <Lottie animationData={infinity} lottieRef={infinityRef} style={{ width: 32, height: 32 }} />
-        Welcome focus my other sites.
+        {t("otherSites.title")}
       </div>
       <ul className="my-4 space-y-3">
         {otherSites.map((site) => (
@@ -34,10 +36,10 @@ export default function OtherSite() {
               href={site.url}
               className="flex justify-start gap-3 h-20 w-full"
             >
-              <Image src={site.icon} width={30} height={30} alt={site.name} radius="none" />
+              <Image src={site.icon} width={30} height={30} alt={t(site.name)} radius="none" />
               <div className="flex flex-col gap-0">
-                <h5 className="text-base">{site.name}</h5>
-                <p className="text-sm text-default-500 block whitespace-normal leading-4">{site.description}</p>
+                <h5 className="text-base">{t(site.name)}</h5>
+                <p className="text-sm text-default-500 block whitespace-normal leading-4">{t(site.description)}</p>
               </div>
               <AnimateArrow size={24} arrowColor="text-primary" className="absolute right-4" />
             </Button>

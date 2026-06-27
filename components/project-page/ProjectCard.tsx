@@ -5,11 +5,13 @@ import { Button, Divider, Image, Link } from "@nextui-org/react";
 import NextImage from "next/image";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 import { DarkMouseShadowColors, LightMouseShadowColors } from "../constants";
 import AnimateArrow from "../ui/AnimateArrow";
 
 export function ProjectCard(props: ProjectsProps) {
   const { name, shortIntro, coverImg, slug, techStacks } = props;
+  const t = useTranslations();
 
   const { theme } = useTheme();
   const mouseX = useMotionValue(0);
@@ -32,7 +34,7 @@ export function ProjectCard(props: ProjectsProps) {
       >
         <NextImage
           src={coverImg}
-          alt={name}
+          alt={t(name)}
           width={1000}
           height={1000}
           className="object-cover w-full h-full transition-all ease-in-out group-hover:duration-1000 group-hover/img:scale-110"
@@ -41,13 +43,13 @@ export function ProjectCard(props: ProjectsProps) {
       <CardBody className="z-50 dark:text-neutral-100 cursor-default">
         <div className="mb-2 flex justify-between items-center">
           <Typography variant="h5" color="blue-gray" className="lg:line-clamp-1 overflow-ellipsis">
-            {name}
+            {t(name)}
           </Typography>
           <Button as={Link} href={`/project/${slug}`} variant="light" size="sm" className="-mr-2">
-            <AnimateArrow text="MORE" size={20} />
+            <AnimateArrow text={t("projectList.more")} size={20} />
           </Button>
         </div>
-        <Typography className="dark:text-neutral-300 lg:line-clamp-2 overflow-ellipsis">{shortIntro}</Typography>
+        <Typography className="dark:text-neutral-300 lg:line-clamp-2 overflow-ellipsis">{t(shortIntro)}</Typography>
       </CardBody>
       <CardFooter className="flex flex-wrap justify-start z-50 items-center gap-2 pt-0">
         {techStacks?.map((tech) => (

@@ -7,10 +7,12 @@ import dynamic from "next/dynamic";
 import { FormEvent, useEffect, useRef, useState } from "react";
 import { SendEmailIcon } from "../../icons";
 import SendedTip from "./SendedTip";
+import { useTranslations } from "next-intl";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function EmailForm() {
+  const t = useTranslations("contact.form");
   const [nameValue, setNameValue] = useState("");
   const [emailValue, setEmailValue] = useState("");
   const [messageValue, setMessageInput] = useState("");
@@ -91,7 +93,7 @@ export default function EmailForm() {
           type="text"
           name="name"
           variant="bordered"
-          label="Name"
+          label={t("name")}
           radius="lg"
           color="primary"
           classNames={{
@@ -112,8 +114,8 @@ export default function EmailForm() {
           type="email"
           name="email"
           variant="bordered"
-          placeholder="aarynlu@0x3f4.run"
-          label="Email"
+          placeholder={t("emailPlaceholder")}
+          label={t("email")}
           radius="lg"
           color="primary"
           classNames={{
@@ -126,9 +128,9 @@ export default function EmailForm() {
           isRequired
           type="text"
           name="message"
-          label="Message"
+          label={t("message")}
           variant="bordered"
-          placeholder="What do you want to say to me?"
+          placeholder={t("messagePlaceholder")}
           disableAnimation
           radius="lg"
           classNames={{
@@ -156,7 +158,7 @@ export default function EmailForm() {
                   isSending ? "lg:translate-x-1" : ""
                 }`}
               >
-                {isSending ? "Sending..." : "Send to me now"}
+                {isSending ? t("sending") : t("send")}
               </div>
               <Lottie
                 animationData={emailSend}

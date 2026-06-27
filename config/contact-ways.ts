@@ -3,7 +3,7 @@ import { siteConfig } from "./site";
 export const contactWays = [
   {
     id: "1",
-    name: "Wechat",
+    name: "contact.contactWays.wechat",
     icon: "/contact/wechat.svg",
     hasPopover: true,
     qrCode: "/contact/wechat-qrcode.jpg",
@@ -11,7 +11,7 @@ export const contactWays = [
   },
   {
     id: "2",
-    name: "QQ",
+    name: "contact.contactWays.qq",
     icon: "/contact/qq.svg",
     hasPopover: true,
     qrCode: "/contact/qq-qrcode.jpg",
@@ -19,14 +19,14 @@ export const contactWays = [
   },
   {
     id: "3",
-    name: "Twitter",
+    name: "contact.contactWays.twitter",
     icon: "/contact/twitter.svg",
     link: siteConfig.links.authTwitter,
     hasPopover: false,
   },
   {
     id: "4",
-    name: "GitHub",
+    name: "contact.contactWays.github",
     icon: "/contact/github.svg",
     link: siteConfig.links.authGitHub,
     hasPopover: false,

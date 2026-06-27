@@ -4,8 +4,10 @@ import { Link } from "@nextui-org/link";
 import "./index.css";
 import { useTheme } from "next-themes";
 import { Image } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) {
+  const t = useTranslations();
   const { theme } = useTheme();
 
   return (
@@ -19,9 +21,9 @@ export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) 
           <div className="slide" key={logo.name}>
             <Link isExternal color="foreground" href={logo.href} className="flex gap-2">
               {logo.src !== "" ? (
-                <Image src={logo.src} alt={logo.name} width={44} height={44} radius="sm" />
+                <Image src={logo.src} alt={t(logo.name)} width={44} height={44} radius="sm" />
               ) : (
-                <span className="font-bold text-xl">{logo.name}</span>
+                <span className="font-bold text-xl">{t(logo.name)}</span>
               )}
             </Link>
           </div>
@@ -32,9 +34,9 @@ export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) 
           <div className="slide" key={logo.name}>
             <Link isExternal color="foreground" href={logo.href} className="flex gap-2">
               {logo.src !== "" ? (
-                <Image src={logo.src} alt={logo.name} width={44} height={44} radius="sm" />
+                <Image src={logo.src} alt={t(logo.name)} width={44} height={44} radius="sm" />
               ) : (
-                <span className="font-bold text-xl">{logo.name}</span>
+                <span className="font-bold text-xl">{t(logo.name)}</span>
               )}
             </Link>
           </div>
@@ -44,9 +46,9 @@ export default function LogoCarousel({ logos }: { logos: LogoCarouselProps[] }) 
             <div className="slide" key={logo.name}>
               <Link isExternal color="foreground" href={logo.href} className="flex gap-2">
                 {logo.src !== "" ? (
-                  <Image src={logo.src} alt={logo.name} width={44} height={44} radius="sm" />
+                  <Image src={logo.src} alt={t(logo.name)} width={44} height={44} radius="sm" />
                 ) : (
-                  <span className="font-bold text-xl">{logo.name}</span>
+                  <span className="font-bold text-xl">{t(logo.name)}</span>
                 )}
               </Link>
             </div>

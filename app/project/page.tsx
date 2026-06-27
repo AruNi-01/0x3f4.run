@@ -1,19 +1,25 @@
+"use client";
+
 import { ProjectCard } from "@/components/project-page/ProjectCard";
 import AnimateLink from "@/components/ui/AnimateLink";
 import H1Title from "@/components/ui/H1Title";
 import { projects } from "@/config/projects";
+import { useTranslations } from "next-intl";
 
 export default function BlogPage() {
+  const t = useTranslations("project");
+
   return (
     <section className="flex flex-col items-start justify-center gap-6 lg:mx-0 mx-7 animate-slide-in-from-right-800">
-      <title>Project | 0x3f4.run</title>
-      <H1Title>Project & Open Source</H1Title>
+      <H1Title>{t("pageTitle")}</H1Title>
       <div className="font-medium opacity-80">
-        Here are some of my projects and open source, welcome{" "}
-        <AnimateLink href="/contact" className="text-primary">
-          contact me
-        </AnimateLink>{" "}
-        if you are interested in them.
+        {t.rich("introWithContact", {
+          link: (chunks) => (
+            <AnimateLink href="/contact" className="text-primary">
+              {chunks}
+            </AnimateLink>
+          ),
+        })}
       </div>
       <ul className="grid place-items-start gap-5 lg:grid-cols-2">
         {projects.map((project) => (

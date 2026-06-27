@@ -2,10 +2,9 @@ import { ProjectsProps } from "@/types/ProjectsProps";
 
 export const projects: ProjectsProps[] = [
   {
-    name: "Personal Homepage",
-    shortIntro: "A personal homepage that supports desktop and mobile devices, adapt to dark theme.",
-    detailIntro:
-      "A personal homepage that supports desktop and mobile devices, adapt to dark theme. It based on NextUI, Material Tailwind and Flowbite component libraries. In animation, Lottie React, Framer Motion, etc. were used. And now deployed on Vercel.",
+    name: "project.projects.personalHomepage.name",
+    shortIntro: "project.projects.personalHomepage.shortIntro",
+    detailIntro: "project.projects.personalHomepage.detailIntro",
     coverImg: "/project/personal-homepage.png",
     previewLink: "https://0x3f4.run",
     sourceLink: "https://github.com/aruni-01/0x3f4.run",
@@ -34,10 +33,9 @@ export const projects: ProjectsProps[] = [
     ],
   },
   {
-    name: "PromptRun",
-    shortIntro: "Make using LLMs easier, more efficient, and more in line with expectations.",
-    detailIntro:
-      "An AIGC (Artificial Intelligence Generated Content) prompt trading platform. Here, you can buy and sell high-quality prompts to provide inspiration and guidance for your creative, writing, and other AI-generated content tasks.",
+    name: "project.projects.promptrun.name",
+    shortIntro: "project.projects.promptrun.shortIntro",
+    detailIntro: "project.projects.promptrun.detailIntro",
     coverImg: "/project/promptrun.png",
     previewLink: "https://promptrun.0x3f4.run",
     sourceLink: "https://github.com/aruni-01/promptrun",
@@ -86,11 +84,9 @@ export const projects: ProjectsProps[] = [
     ],
   },
   {
-    name: "Wolai2Notion",
-    shortIntro:
-      "A Python tool for transferring Wolai to Notion, supporting most types of Block, and conversion of Database and Page.",
-    detailIntro:
-      "A Python tool for transferring Wolai to Notion, supporting most types of Block, and conversion of Database and Page.",
+    name: "project.projects.wolai2notion.name",
+    shortIntro: "project.projects.wolai2notion.shortIntro",
+    detailIntro: "project.projects.wolai2notion.detailIntro",
     coverImg: "/project/wolai2notion.png",
     previewLink: "",
     sourceLink: "https://github.com/AruNi-01/wolai2notion",
@@ -104,10 +100,9 @@ export const projects: ProjectsProps[] = [
     ],
   },
   {
-    name: "LeetCode Archive",
-    shortIntro: "LeetCode problems archive, include swordfinger offer, leetcode hot 100, codetop 100, sort algo etc.",
-    detailIntro:
-      "LeetCode problems archive, include swordfinger offer, leetcode hot 100, codetop 100, sort algo etc. It has two versions, one is based on Wolai: https://www.wolai.com/aruni/fKuL9hqz8MhXqvcHrn31uF, and the other is based on Notion: https://aarynlu.notion.site/LeetCode-5e748f5f012743ae97b12a93908c9e58?pvs=4",
+    name: "project.projects.leetcodeArchive.name",
+    shortIntro: "project.projects.leetcodeArchive.shortIntro",
+    detailIntro: "project.projects.leetcodeArchive.detailIntro",
     coverImg: "/project/leetcode-archive.png",
     previewLink: "https://www.wolai.com/aruni/fKuL9hqz8MhXqvcHrn31uF",
     sourceLink: "",

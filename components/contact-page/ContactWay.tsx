@@ -1,4 +1,5 @@
 import { contactWays } from "@/config/contact-ways";
+import { useTranslations } from "next-intl";
 import { Popover, PopoverContent, PopoverHandler } from "@material-tailwind/react";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
@@ -8,6 +9,7 @@ import React, { MouseEvent } from "react";
 export default function ContactWay() {
   // use boolean[] to control contact is popover?
   const [popoverState, setPopoverState] = React.useState<boolean[]>(contactWays.map(() => false));
+  const t = useTranslations();
 
   const onMouseEnterHandle = (id: string, hasPopover: boolean) => {
     if (!hasPopover) return;
@@ -64,8 +66,8 @@ export default function ContactWay() {
               variant="faded"
               className="text-neutral-800 dark:text-neutral-300"
             >
-              <Image src={contact.icon} alt={contact.name} radius="none" />
-              {contact.name}
+              <Image src={contact.icon} alt={t(contact.name)} radius="none" />
+              {t(contact.name)}
             </Button>
           </PopoverHandler>
           <PopoverContent
@@ -78,7 +80,7 @@ export default function ContactWay() {
                 <Snippet
                   tooltipProps={{
                     color: "default",
-                    content: "Copy to add",
+                    content: t("contact.contactWays.copyToAdd"),
                     placement: "right",
                     closeDelay: 0,
                   }}
@@ -86,9 +88,9 @@ export default function ContactWay() {
                   radius="none"
                   className={cn(
                     "w-full rounded-tl-xl rounded-tr-xl font-medium",
-                    contact.name === "QQ"
+                    contact.id === "2"
                       ? " bg-neutral-800  text-neutral-500"
-                      : contact.name === "Wechat"
+                      : contact.id === "1"
                       ? " bg-[#C59FAC] text-neutral-200"
                       : ""
                   )}
@@ -99,7 +101,7 @@ export default function ContactWay() {
                 ""
               )}
               {contact.qrCode ? (
-                <Image src={contact.qrCode} alt={contact.name} radius="none" className="rounded-bl-xl rounded-br-xl" />
+                <Image src={contact.qrCode} alt={t(contact.name)} radius="none" className="rounded-bl-xl rounded-br-xl" />
               ) : (
                 ""
               )}

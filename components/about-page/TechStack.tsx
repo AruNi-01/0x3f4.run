@@ -1,11 +1,14 @@
 import { TechStacksProps } from "@/types/TechStacksProps";
 import { Chip, Image, Link } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 export default function TechStack({ techStacks }: { techStacks: TechStacksProps[] }) {
+  const t = useTranslations("sidebar");
+
   return (
     <>
       {!techStacks || techStacks.length === 0 ? (
-        <p className="text-neutral-500 dark:text-neutral-400 text-sm">No tech stack.</p>
+        <p className="text-neutral-500 dark:text-neutral-400 text-sm">{t("noTech")}</p>
       ) : (
         <ul className="mt-1 flex flex-wrap items-center gap-3">
           {techStacks.map(({ src, name, href }, index) => (

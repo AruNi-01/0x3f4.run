@@ -8,10 +8,12 @@ import dynamic from "next/dynamic";
 import { useRef } from "react";
 import { CongratulationIcon } from "../../icons";
 import style from "./index.module.scss";
+import { useTranslations } from "next-intl";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function TopTip() {
+  const t = useTranslations("home");
   const selebrationRef = useRef<any>();
 
   let timer: NodeJS.Timeout;
@@ -38,9 +40,7 @@ export default function TopTip() {
         <span className="text-xs bg-blue-500 dark:bg-blue-950 rounded-full flex gap-2 text-white/80 px-4 py-1.5 me-3">
           <CongratulationIcon />
         </span>
-        <span className="text-sm font-medium block whitespace-normal line-clamp-2 overflow-ellipsis">
-          This website is open source on GitHub! Clone/Fork Now
-        </span>
+        <span className="text-sm font-medium block whitespace-normal line-clamp-2 overflow-ellipsis">{t("topTip")}</span>
         <AnimateArrow size={18} />
       </Button>
       <Lottie

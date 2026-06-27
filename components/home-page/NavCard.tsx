@@ -3,6 +3,7 @@ import { NavCardProps } from "@/types/NavCardProps";
 import { Card, CardBody, CardFooter, Typography } from "@material-tailwind/react";
 import { Button } from "@nextui-org/button";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
@@ -21,6 +22,7 @@ export default function NavCard({
   buttonText,
   buttonLink,
 }: NavCardProps) {
+  const t = useTranslations();
   const router = useRouter();
 
   const lottieRef = useRef<any>();
@@ -62,9 +64,9 @@ export default function NavCard({
           className="-ml-4 -mt-4"
         />
         <Typography variant="h5" color="blue-gray" className="mb-2 dark:text-neutral-200">
-          {title}
+          {t(title)}
         </Typography>
-        <Typography className="dark:text-neutral-300 lg:line-clamp-2 overflow-ellipsis">{description}</Typography>
+        <Typography className="dark:text-neutral-300 lg:line-clamp-2 overflow-ellipsis">{t(description)}</Typography>
       </CardBody>
       <CardFooter className="pt-0 z-50">
         <Button
@@ -75,7 +77,7 @@ export default function NavCard({
           color="default"
           className="flex gap-2 dark:text-neutral-200"
         >
-          <AnimateArrow text={buttonText} textSize="text-md" size={24} />
+          <AnimateArrow text={t(buttonText)} textSize="text-md" size={24} />
         </Button>
       </CardFooter>
       <motion.div

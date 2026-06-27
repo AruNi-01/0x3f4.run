@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "title": "AarynLu | 0x3f4.run",
+    "description": "AarynLu 的个人主页，使用 NextUI 构建，部署在 Vercel。"
+  },
+  "language": {
+    "label": "语言",
+    "en": "English",
+    "zh": "中文"
+  },
+  "controls": {
+    "switchToDark": "切换到深色模式",
+    "switchToLight": "切换到浅色模式",
+    "navigationMenu": "导航菜单"
+  },
+  "navigation": {
+    "home": "首页",
+    "project": "项目",
+    "about": "关于",
+    "contact": "联系",
+    "website": "网站"
+  },
+  "home": {
+    "titleAnimation": "AarynLu | 0x3f4.run",
+    "motto": "人生最遗憾的是，我本可以",
+    "topTip": "这个网站开源于 GitHub，可克隆/分叉体验",
+    "cards": {
+      "aboutMe": {
+        "title": "关于我",
+        "description": "软件工程师，走在独立开发者路上 - 驾驭 AI 而非手写代码。",
+        "button": "查看"
+      },
+      "website": {
+        "title": "关于网站",
+        "description": "一个支持桌面和移动端、并适配暗色主题的个人主页。",
+        "button": "查看"
+      }
+    }
+  },
+  "sidebar": {
+    "state": "状态：{status}",
+    "stateValue": "在岗",
+    "deployedOn": "部署于",
+    "noTech": "暂无技术栈"
+  },
+  "about": {
+    "title": "关于我",
+    "contentIntro": "你好，我是 <name>AarynLu</name>，一名软件工程师，正走在独立开发者路上。",
+    "contentFocus": "我关注 AI Agent、开发工具、自动化和 AI-native 产品构建。相比亲手编写每一行代码，我更关心如何驾驭 AI：定义问题、设计工作流、组织工具，带着批判性思维看待生成式内容，并把想法变成真正可用的系统。",
+    "contentBelief": "我相信在 AI 时代，创造产品的门槛正在被重新定义。软件工程师的价值不只在于写代码，而在于理解问题、设计工程与系统、判断结果，并持续推动想法落地。",
+    "contentClosing": "现在的我，正在用这种方式探索一个人可以创造什么。",
+    "locationLabel": "上海，中国",
+    "otherSiteTitle": "其他站点",
+    "doingNow": "我正在做什么",
+    "timelineTitle": "人生时间线",
+    "timeline": {
+      "born": "出生于贵州",
+      "university": "本科毕业于 <link>WIT</link>",
+      "hellobike": "在 <link>Hellobike</link> 担任后端开发",
+      "future": "未知与期待",
+      "timeRange": "2001 年 10 月",
+      "universityTime": "2020 年 9 月 — 2024 年 6 月",
+      "hellobikeTime": "2024 年 7 月 — 至今",
+      "futureTime": "敬请期待..."
+    },
+    "time": {
+      "in": "在 {location}",
+      "currently": "当前",
+      "activities": {
+        "sleeping": "在睡觉",
+        "eating": "在进食",
+        "working": "在工作",
+        "playing": "在玩"
+      },
+      "notes": {
+        "sleeping": "00:00-08:00",
+        "eating": "12:00-13:00 / 18:00-19:00",
+        "working": "10:00-12:00 / 13:00-18:00 / 19:00-21:00",
+        "playing": "其他时段"
+      }
+    },
+    "otherSites": {
+      "title": "欢迎查看更多我的其他站点。",
+      "sitePersonal": {
+        "name": "个人网站",
+        "description": "我的个人站点。"
+      },
+      "siteCodebox": {
+        "name": "Code Tracks Box",
+        "description": "记录我的代码学习和项目过程。"
+      }
+    },
+    "employmentState": "在岗"
+  },
+  "project": {
+    "pageTitle": "项目与开源",
+    "intro": "以下是我做过的一些项目和开源作品，如果你感兴趣，欢迎联系我。",
+    "introWithContact": "以下是我做过的一些项目和开源作品，如果你感兴趣，欢迎 <link>联系我</link>。",
+    "detailBack": "返回",
+    "detailImageNote": "悬停或点击预览/源码",
+    "preview": "预览",
+    "source": "源码",
+    "techStack": "技术栈",
+    "title": "项目 | 0x3f4.run",
+    "projects": {
+      "personalHomepage": {
+        "name": "个人主页",
+        "shortIntro": "一个支持桌面端和移动端、并适配深色主题的个人主页。",
+        "detailIntro": "这是一个支持桌面端和移动端、适配深色主题的个人主页。基于 NextUI、Material Tailwind 和 Flowbite 组件库实现，动画部分使用 Lottie React、Framer Motion 等技术，并已部署到 Vercel。"
+      },
+      "promptrun": {
+        "name": "PromptRun",
+        "shortIntro": "更容易、更高效、更符合预期地使用大模型。",
+        "detailIntro": "一款 AIGC 提示词交易平台，你可以在这里买卖优质 prompt，并为你的写作、创作等 AI 内容任务提供灵感与参考。"
+      },
+      "wolai2notion": {
+        "name": "Wolai2Notion",
+        "shortIntro": "一款用于将 Wolai 内容同步到 Notion 的 Python 工具，支持多数 Block 类型及数据库和页面转换。",
+        "detailIntro": "一款用于将 Wolai 内容同步到 Notion 的 Python 工具，支持多数 Block 类型，并支持数据库与页面的转换。"
+      },
+      "leetcodeArchive": {
+        "name": "LeetCode 归档",
+        "shortIntro": "LeetCode 题库归档，包含剑指 offer、LeetCode Hot 100、CodeTop 100、排序算法等。",
+        "detailIntro": "LeetCode 题库归档，包含剑指 offer、LeetCode Hot 100、CodeTop 100、排序算法等。项目有两个版本，一个基于 Wolai，另一个基于 Notion。"
+      }
+    }
+  },
+  "contact": {
+    "title": "联系我",
+    "intro": "如果你有任何问题或合作想法，欢迎通过 <below>以下方式</below> 联系我。你也可以发邮件交流。",
+    "sendTitle": "发送邮件",
+    "sendDesc": "你可以使用邮箱 <email>hello@0x3f4.run</email> 联系我，或者直接填写下方表单发送。",
+    "sendEmail": "发送邮件",
+    "form": {
+      "name": "姓名",
+      "email": "邮箱",
+      "message": "内容",
+      "emailPlaceholder": "aarynlu@0x3f4.run",
+      "messagePlaceholder": "你想跟我说些什么？",
+      "sending": "发送中...",
+      "send": "立即发送",
+      "success": "发送成功，我会尽快回复你。",
+      "fail": "发送失败，参数错误或服务异常。"
+    },
+    "contactWays": {
+      "wechat": "微信",
+      "qq": "QQ",
+      "twitter": "推特",
+      "github": "GitHub",
+      "copyToAdd": "复制可添加"
+    }
+  },
+  "website": {
+    "title": "网站介绍 | 0x3f4.run",
+    "header": "关于网站",
+    "builtBy": "Built By",
+    "deployButton": "部署",
+    "introTitle": "简介",
+    "featureTitle": "特性",
+    "usageTitle": "使用方式",
+    "deployTitle": "在 Vercel 部署",
+    "introDesc": "这是一个个人网站，用于展示你的基本信息、项目、联系方式、技能等内容。",
+    "introSecond": "项目基于 React、Next.js、Tailwind CSS、NextUI、Lottie 动画等技术。你可以在上方图标区域查看使用到的技术。",
+    "feature": {
+      "theme": "支持亮色和暗色主题",
+      "responsive": "兼容桌面端与移动端",
+      "router": "支持 Next.js 的 App Router 与 API Router",
+      "more": "更多配置，按需分割，更少冗余代码",
+      "coming": "即将支持更多特性"
+    },
+    "usage": {
+      "clone": "克隆",
+      "cloneRepo": "此仓库",
+      "install": "安装依赖",
+      "run": "本地运行"
+    },
+    "deploy": {
+      "fork": "前往 GitHub，fork 该仓库。",
+      "import": "登录 Vercel 并导入仓库，或点击右侧按钮直接部署。",
+      "waiting": "等待部署完成即可访问。"
+    },
+    "logo": {
+      "react": { "name": "React", "description": "用于构建用户界面的 JavaScript 库" },
+      "nextjs": { "name": "Next.js", "description": "面向生产环境的 React 框架" },
+      "typescript": { "name": "TypeScript", "description": "可扩展的 JavaScript" },
+      "tailwind": { "name": "Tailwind CSS", "description": "无需离开 HTML，即可快速构建现代网站。" },
+      "nextui": { "name": "NextUI", "description": "美观、可扩展的 React UI 库。" },
+      "flowbite": { "name": "Flowbite", "description": "开源 HTML UI 工具库" },
+      "materialTailwind": { "name": "Material Tailwind", "description": "Material Design 风格的 Tailwind UI 组件库" },
+      "framer": { "name": "Framer Motion", "description": "生产就绪的 React 动画库" },
+      "lottie": { "name": "Lottie", "description": "适用于安卓、iOS、Web 与 Windows 的动画解析与播放库" },
+      "lottieFiles": { "name": "LottieFiles", "description": "Lottie 动画资源集合" },
+      "vercel": { "name": "Vercel", "description": "高效开发、预览与部署平台" }
+    }
+  },
+  "errors": {
+    "oops": "糟糕！",
+    "notFoundTitle": "页面不存在",
+    "lookingFor": "。你要查看的内容是：",
+    "takeMePrefix": "前往",
+    "backHome": "返回首页",
+    "tryAgain": "重试",
+    "crash": "页面似乎出现了一些错误"
+  },
+  "projectList": {
+    "more": "更多"
+  },
+  "actions": {
+    "follow": "关注",
+    "view": "查看"
+  }
+}

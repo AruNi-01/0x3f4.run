@@ -13,41 +13,41 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "AarynLu",
-  description: "AarynLu's personal website, made by NextUI, deployed on Vercel.",
+  description: "meta.description",
   avatar: "/logo.png",
   browserIcon: "/favicon.ico",
 
   homePage: {
-    titleAnimationStr: "AarynLu | 0x3f4.run",
-    mottoStr: "The most regretful thing in life is I could have been",
+    titleAnimationStr: "home.titleAnimation",
+    mottoStr: "home.motto",
   },
 
   sidebar: {
     headTitle: "AarynLu",
     headIcon: "/logo.png",
     linkLabel: "AruNi-01",
-    state: "Unemployed",
+    state: "sidebar.stateValue",
     navItems: [
       {
-        label: "Home",
+        label: "navigation.home",
         outlineIcon: <HomeOutlineIcon />,
         solidIcon: <HomeSolidIcon />,
         href: "/",
       },
       {
-        label: "Project",
+        label: "navigation.project",
         outlineIcon: <ProjectOutlineIcon />,
         solidIcon: <ProjectSolidIcon />,
         href: "/project",
       },
       {
-        label: "About",
+        label: "navigation.about",
         outlineIcon: <AboutOutlineIcon />,
         solidIcon: <AboutSolidIcon />,
         href: "/about",
       },
       {
-        label: "Contact",
+        label: "navigation.contact",
         outlineIcon: <ContactOutlineIcon />,
         solidIcon: <ContactSolidIcon />,
         href: "/contact",
@@ -57,7 +57,7 @@ export const siteConfig = {
 
   mobile: {
     headerTitle: "AarynLu",
-    titleAnimationStr: "AarynLu", // don't too long
+    titleAnimationStr: "AarynLu",
   },
 
   links: {

@@ -1,13 +1,13 @@
 export const otherSites = [
   {
-    name: "Personal Site",
-    description: "My personal site.",
+    name: "about.otherSites.sitePersonal.name",
+    description: "about.otherSites.sitePersonal.description",
     url: "https://0x3f4.run",
     icon: "/site/person.svg",
   },
   {
-    name: "Code Tracks Box",
-    description: "Record the my code process.",
+    name: "about.otherSites.siteCodebox.name",
+    description: "about.otherSites.siteCodebox.description",
     url: "https://code.0x3f4.run",
     icon: "/site/codebox.svg",
   },

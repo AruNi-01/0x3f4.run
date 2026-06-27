@@ -2,45 +2,41 @@ import { Button, Checkbox, CheckboxGroup, Image, Link, Snippet } from "@nextui-o
 import H2Title from "../ui/H2Title";
 import { VercelIcon2 } from "../icons";
 import AnimateLink from "../ui/AnimateLink";
+import { useTranslations } from "next-intl";
 
 export default function Content() {
+  const t = useTranslations("website");
   const selectedFeature = ["1", "2", "3", "4"];
 
   return (
     <div className="flex flex-col gap-3 justify-center font-medium opacity-80 animate-slide-in-to-up-1000">
-      <H2Title className="font-bold">Intro</H2Title>
+      <H2Title className="font-bold">{t("introTitle")}</H2Title>
       <span>
-        <p>
-          This is a personal website, you can show your information, your projects, your social contact, your skills,
-          etc.
-        </p>
-        <p>
-          It &apos;s based on React, Next.js, Tailwind CSS, NextUI, Lottie Animation, and more. You can see them in the
-          logo display area above.
-        </p>
+        <p>{t("introDesc")}</p>
+        <p>{t("introSecond")}</p>
       </span>
-      <H2Title className="font-bold">Feature</H2Title>
+      <H2Title className="font-bold">{t("featureTitle")}</H2Title>
       <CheckboxGroup defaultValue={selectedFeature}>
         <Checkbox isReadOnly value="1">
-          Support light and dark theme
+          {t("feature.theme")}
         </Checkbox>
         <Checkbox isReadOnly value="2">
-          Adapt desktop and mobile devices
+          {t("feature.responsive")}
         </Checkbox>
         <Checkbox isReadOnly value="3">
-          Next.js app router and api router feature
+          {t("feature.router")}
         </Checkbox>
         <Checkbox isReadOnly value="4">
-          More configuration, less code {"(data/code splitting...)"}
+          {t("feature.more")}
         </Checkbox>
-        <Checkbox value="5">coming soon...</Checkbox>
+        <Checkbox value="5">{t("feature.coming")}</Checkbox>
       </CheckboxGroup>
-      <H2Title className="font-bold">Usage</H2Title>
+      <H2Title className="font-bold">{t("usageTitle")}</H2Title>
       <span className="space-y-2">
         <p>
-          1. Clone{" "}
+          1. {t("usage.clone")}{" "}
           <AnimateLink isExternal href="https://github.com/AruNi-01/0x3f4.run">
-            this repo
+            {t("usage.cloneRepo")}
           </AnimateLink>
         </p>
         <div className="hidden lg:flex">
@@ -49,16 +45,16 @@ export default function Content() {
         <Snippet size="sm" className="lg:hidden">
           git clone repo_git_url
         </Snippet>
-        <p>2. Install dependencies</p>
+        <p>2. {t("usage.install")}</p>
         <Snippet size="sm">npm install</Snippet>
-        <p>3. Run it localhost</p>
+        <p>3. {t("usage.run")}</p>
         <Snippet size="sm">npm run dev</Snippet>
       </span>
-      <H2Title className="font-bold">Deploy on vercel</H2Title>
+      <H2Title className="font-bold">{t("deployTitle")}</H2Title>
       <span className="space-y-2">
-        <p>1. Go to github, fork this repo on your account.</p>
+        <p>1. {t("deploy.fork")}</p>
         <p>
-          2. Go to vercel, login and import this repo, or click right button to deploy.{" "}
+          2. {t("deploy.import")}{" "}
           <Button
             as={Link}
             size="sm"
@@ -66,10 +62,10 @@ export default function Content() {
             isExternal
             color="primary"
             startContent={<VercelIcon2 />}
-            endContent={<span className="font-bold">Deploy</span>}
+            endContent={<span className="font-bold">{t("deployButton")}</span>}
           />
         </p>
-        <p>3. Waiting done!</p>
+        <p>3. {t("deploy.waiting")}</p>
       </span>
     </div>
   );

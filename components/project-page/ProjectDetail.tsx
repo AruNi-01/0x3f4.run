@@ -1,7 +1,10 @@
+"use client";
+
 import { ProjectsProps } from "@/types/ProjectsProps";
 import { Button, Divider, Link, cn } from "@nextui-org/react";
 import NextImage from "next/image";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import TechStack from "../about-page/TechStack";
 import { PreviewIcon, SourceCodeIcon } from "../icons";
 import H1Title from "../ui/H1Title";
@@ -9,13 +12,14 @@ import H2Title from "../ui/H2Title";
 
 export default function ProjectDetail(props: ProjectsProps) {
   const { name, detailIntro, coverImg, previewLink, sourceLink, techStacks } = props;
+  const t = useTranslations("project");
 
   const [isImgHover, setIsImgHover] = useState(false);
   const [isImgHoverAnimation, setIsImgHoverAnimation] = useState(false);
 
   return (
     <div className="flex flex-col gap-4 animate-slide-in-to-up-1000">
-      <H1Title className="mb-4">{name}</H1Title>
+      <H1Title className="mb-4">{t(name)}</H1Title>
       <figure
         className="relative group/img"
         onMouseEnter={() => {
@@ -35,7 +39,7 @@ export default function ProjectDetail(props: ProjectsProps) {
       >
         <NextImage
           src={coverImg}
-          alt={name}
+          alt={t(name)}
           width={1000}
           height={1000}
           className={cn(
@@ -54,7 +58,7 @@ export default function ProjectDetail(props: ProjectsProps) {
                 color="default"
                 size="lg"
                 startContent={<PreviewIcon />}
-                endContent={<span className="-ml-1 font-bold">Preview</span>}
+                endContent={<span className="-ml-1 font-bold">{t("preview")}</span>}
                 className={`${isImgHoverAnimation ? "animate-slide-in-to-up-500" : "animate-slide-out-to-up-500"}`}
               />
             )}
@@ -67,7 +71,7 @@ export default function ProjectDetail(props: ProjectsProps) {
                 color="default"
                 size="lg"
                 startContent={<SourceCodeIcon />}
-                endContent={<span className="-ml-1 font-bold">Source</span>}
+                endContent={<span className="-ml-1 font-bold">{t("source")}</span>}
                 className={`${isImgHoverAnimation ? "animate-slide-in-to-up-500" : "animate-slide-out-to-up-500"}`}
               />
             )}
@@ -75,13 +79,13 @@ export default function ProjectDetail(props: ProjectsProps) {
         )}
       </figure>
       <span className="self-center text-neutral-400 dark:text-neutral-500 text-sm -mt-3">
-        Click/Hover get preview or source code
+        {t("detailImageNote")}
       </span>
-      <div className="font-medium opacity-80">{detailIntro}</div>
+      <div className="font-medium opacity-80">{t(detailIntro)}</div>
       {techStacks && (
         <>
           <Divider />
-          <H2Title>Tech stack</H2Title>
+          <H2Title>{t("techStack")}</H2Title>
           <TechStack techStacks={techStacks} />
         </>
       )}

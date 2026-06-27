@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "title": "AarynLu | 0x3f4.run",
+    "description": "AarynLu's personal website, made by NextUI, deployed on Vercel."
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "zh": "中文"
+  },
+  "controls": {
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode",
+    "navigationMenu": "Navigation menu"
+  },
+  "navigation": {
+    "home": "Home",
+    "project": "Project",
+    "about": "About",
+    "contact": "Contact",
+    "website": "Website"
+  },
+  "home": {
+    "titleAnimation": "AarynLu | 0x3f4.run",
+    "motto": "The most regretful thing in life is I could have been",
+    "topTip": "This website is open source on GitHub! Clone/Fork Now",
+    "cards": {
+      "aboutMe": {
+        "title": "About Me",
+        "description": "Software engineer, becoming indie hacker — Harnessing AI, not handwriting code.",
+        "button": "FOLLOW"
+      },
+      "website": {
+        "title": "About Website",
+        "description": "A personal homepage that supports desktop and mobile devices, adapt to dark theme.",
+        "button": "VIEW"
+      }
+    }
+  },
+  "sidebar": {
+    "state": "Status: {status}",
+    "stateValue": "in-service",
+    "deployedOn": "Deployed on",
+    "noTech": "No tech stack."
+  },
+  "about": {
+    "title": "About me",
+    "contentIntro": "Hi, I'm <name>AarynLu</name>, a software engineer becoming indie hacker.",
+    "contentFocus": "I'm interested in AI agents, developer tools, automation, and AI-native product building. Instead of handwriting every line of code, I care more about how to harness AI: defining problems, designing workflows, orchestrating tools, viewing generative content with critical thinking, and turning ideas into systems that actually work.",
+    "contentBelief": "I believe that in the age of AI, the barrier to building products is being redefined. The value of a software engineer is no longer just about writing code, but about understanding problems, designing engineering workflows and systems, judging results, and continuously bringing ideas into reality.",
+    "contentClosing": "This is the way I'm exploring what one person can create.",
+    "locationLabel": "Shanghai, China",
+    "otherSiteTitle": "Other site",
+    "doingNow": "What I'm Doing Now",
+    "timelineTitle": "Life timeline",
+    "timeline": {
+      "born": "Born in Guizhou, China",
+      "university": "University in <link>WIT</link>",
+      "hellobike": "Back-end dev in <link>Hellobike</link>",
+      "future": "Unknowns and Expectations",
+      "timeRange": "October 2001",
+      "universityTime": "September 2020 — June 2024",
+      "hellobikeTime": "July 2024 — Present",
+      "futureTime": "Coming soon..."
+    },
+    "time": {
+      "in": "in {location}",
+      "currently": "Currently",
+      "activities": {
+        "sleeping": "sleeping",
+        "eating": "eating",
+        "working": "working",
+        "playing": "playing"
+      },
+      "notes": {
+        "sleeping": "00:00-08:00",
+        "eating": "12:00-13:00 / 18:00-19:00",
+        "working": "10:00-12:00 / 13:00-18:00 / 19:00-21:00",
+        "playing": "all other hours"
+      }
+    },
+    "otherSites": {
+      "title": "Welcome focus my other sites.",
+      "sitePersonal": {
+        "name": "Personal Site",
+        "description": "My personal site."
+      },
+      "siteCodebox": {
+        "name": "Code Tracks Box",
+        "description": "Record the my code process."
+      }
+    },
+    "employmentState": "in-service"
+  },
+  "project": {
+    "pageTitle": "Project & Open Source",
+    "intro": "Here are some of my projects and open source, welcome contact me if you are interested in them.",
+    "introWithContact": "Here are some of my projects and open source, welcome <link>contact me</link> if you are interested in them.",
+    "detailBack": "Back",
+    "detailImageNote": "Click/Hover get preview or source code",
+    "preview": "Preview",
+    "source": "Source",
+    "techStack": "Tech stack",
+    "title": "Project | 0x3f4.run",
+    "projects": {
+      "personalHomepage": {
+        "name": "Personal Homepage",
+        "shortIntro": "A personal homepage that supports desktop and mobile devices, adapt to dark theme.",
+        "detailIntro": "A personal homepage that supports desktop and mobile devices, adapt to dark theme. It based on NextUI, Material Tailwind and Flowbite component libraries. In animation, Lottie React, Framer Motion, etc. were used. And now deployed on Vercel."
+      },
+      "promptrun": {
+        "name": "PromptRun",
+        "shortIntro": "Make using LLMs easier, more efficient, and more in line with expectations.",
+        "detailIntro": "An AIGC (Artificial Intelligence Generated Content) prompt trading platform. Here, you can buy and sell high-quality prompts to provide inspiration and guidance for your creative, writing, and other AI-generated content tasks."
+      },
+      "wolai2notion": {
+        "name": "Wolai2Notion",
+        "shortIntro": "A Python tool for transferring Wolai to Notion, supporting most types of Block, and conversion of Database and Page.",
+        "detailIntro": "A Python tool for transferring Wolai to Notion, supporting most types of Block, and conversion of Database and Page."
+      },
+      "leetcodeArchive": {
+        "name": "LeetCode Archive",
+        "shortIntro": "LeetCode problems archive, include swordfinger offer, leetcode hot 100, codetop 100, sort algo etc.",
+        "detailIntro": "LeetCode problems archive, include swordfinger offer, leetcode hot 100, codetop 100, sort algo etc. It has two versions, one is based on Wolai, and the other is based on Notion."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "intro": "You can find me by <below>below ways</below> if you have any questions or want to cooperate with me, worth celebrating if want become friends with me. Otherwise it's so boring to a programmer who chat with GPT all day. Ahaha!",
+    "sendTitle": "Send an email",
+    "sendDesc": "Use your email client to <email>hello@0x3f4.run</email> or send directly using the table below.",
+    "sendEmail": "Send an email",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "emailPlaceholder": "aarynlu@0x3f4.run",
+      "messagePlaceholder": "What do you want to say to me?",
+      "sending": "Sending...",
+      "send": "Send to me now",
+      "success": "Send success, I will reply you soon.",
+      "fail": "Send fail, mis-typed or server error."
+    },
+    "contactWays": {
+      "wechat": "Wechat",
+      "qq": "QQ",
+      "twitter": "Twitter",
+      "github": "GitHub",
+      "copyToAdd": "Copy to add"
+    }
+  },
+  "website": {
+    "title": "Website | 0x3f4.run",
+    "header": "About Website",
+    "builtBy": "Built By",
+    "introTitle": "Intro",
+    "featureTitle": "Feature",
+    "usageTitle": "Usage",
+    "deployTitle": "Deploy on vercel",
+    "introDesc": "This is a personal website, you can show your information, your projects, your social contact, your skills, etc.",
+    "introSecond": "It's based on React, Next.js, Tailwind CSS, NextUI, Lottie Animation, and more. You can see them in the logo display area above.",
+    "feature": {
+      "theme": "Support light and dark theme",
+      "responsive": "Adapt desktop and mobile devices",
+      "router": "Next.js app router and api router feature",
+      "more": "More configuration, less code (data/code splitting...)",
+      "coming": "coming soon..."
+    },
+    "usage": {
+      "clone": "Clone",
+      "cloneRepo": "this repo",
+      "install": "Install dependencies",
+      "run": "Run it localhost"
+    },
+    "deploy": {
+      "fork": "Go to github, fork this repo on your account.",
+      "import": "Go to vercel, login and import this repo, or click right button to deploy.",
+      "waiting": "Waiting done!"
+    },
+    "deployButton": "Deploy",
+    "logo": {
+      "react": { "name": "React", "description": "A JavaScript library for building user interfaces" },
+      "nextjs": { "name": "Next.js", "description": "The React Framework for Production" },
+      "typescript": { "name": "TypeScript", "description": "JavaScript that scales" },
+      "tailwind": { "name": "Tailwind CSS", "description": "Rapidly build modern websites without ever leaving your HTML." },
+      "nextui": { "name": "NextUI", "description": "A beautiful and extensible React UI library." },
+      "flowbite": { "name": "Flowbite", "description": "Open Source HTML UI Kit" },
+      "materialTailwind": { "name": "Material Tailwind", "description": "Material Design UI Kit Tailwind CSS" },
+      "framer": { "name": "Framer Motion", "description": "A production-ready motion library for React." },
+      "lottie": { "name": "Lottie", "description": "Library for Android, iOS, Web, and Windows that parses Adobe After Effects animations." },
+      "lottieFiles": { "name": "LottieFiles", "description": "LottieFiles is a collection of animations designed for Lottie" },
+      "vercel": { "name": "Vercel", "description": "Develop. Preview. Ship." }
+    }
+  },
+  "errors": {
+    "oops": "Oops!",
+    "notFoundTitle": "Website can't seem to find the",
+    "lookingFor": "you are looking for.",
+    "takeMePrefix": "Take Me",
+    "backHome": "Back Home",
+    "tryAgain": "Try Again",
+    "crash": "Website seems to crashing..."
+  },
+  "projectList": {
+    "more": "MORE"
+  },
+  "actions": {
+    "follow": "FOLLOW",
+    "view": "VIEW"
+  }
+}

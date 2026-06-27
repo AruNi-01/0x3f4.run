@@ -1,9 +1,13 @@
-import { SwitchProps, VisuallyHidden, cn, useSwitch } from "@nextui-org/react";
+"use client";
+
+import { VisuallyHidden, cn, useSwitch } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { MoonIcon, SunIcon } from "../icons";
 
 export const ThemeSwitch = ({ className }: { className?: string }) => {
   const { theme, setTheme } = useTheme();
+  const t = useTranslations("controls");
 
   // const [isSelected, setIsSelected] = useState(true);
   // const handleThemeChange = () => {
@@ -19,7 +23,7 @@ export const ThemeSwitch = ({ className }: { className?: string }) => {
 
   const { Component, slots, isSelected, getBaseProps, getInputProps, getWrapperProps } = useSwitch({
     isSelected: theme === "dark",
-    "aria-label": `Switch to ${theme === "light" ? "dark" : "light"} mode`,
+    "aria-label": theme === "light" ? t("switchToDark") : t("switchToLight"),
     onChange,
     color: "primary",
     size: "sm",

@@ -3,9 +3,11 @@ import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { cn } from "@nextui-org/system";
 import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Center() {
   const pathname = usePathname();
+  const t = useTranslations();
   const itemActiveClass = (path: string): object => {
     return {
       "bg-[#eeeeef] dark:bg-neutral-800": path !== "/" ? pathname.startsWith(path) : pathname === path,
@@ -17,7 +19,7 @@ export default function Center() {
       {siteConfig.sidebar.navItems.map((item) => (
         <Button
           as={Link}
-          key={item.label.toLowerCase()}
+          key={item.href}
           variant="light"
           radius="sm"
           href={item.href}
@@ -26,7 +28,7 @@ export default function Center() {
           {(item.href !== "/" ? pathname.startsWith(item.href) : pathname === item.href)
             ? item.solidIcon
             : item.outlineIcon}
-          <span className="font-semibold dark:text-neutral-300">{item.label}</span>
+          <span className="font-semibold dark:text-neutral-300">{t(item.label)}</span>
         </Button>
       ))}
     </div>

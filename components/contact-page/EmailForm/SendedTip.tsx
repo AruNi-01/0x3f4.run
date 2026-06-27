@@ -1,7 +1,10 @@
 import { FailIcon, SuccessIcon } from "@/components/icons";
 import { Chip } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 export default function SendedTip({ isSuccess, onCloseHandle }: { isSuccess: boolean; onCloseHandle: () => void }) {
+  const t = useTranslations("contact.form");
+
   return (
     <Chip
       startContent={isSuccess ? <SuccessIcon /> : <FailIcon />}
@@ -15,7 +18,7 @@ export default function SendedTip({ isSuccess, onCloseHandle }: { isSuccess: boo
       className="font-bold"
     >
       <span className="block whitespace-normal leading-4">
-        {isSuccess ? "Send success, I will reply you soon." : "Send fail, mis-typed or server error."}
+        {isSuccess ? t("success") : t("fail")}
       </span>
     </Chip>
   );

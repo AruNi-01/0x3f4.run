@@ -1,4 +1,6 @@
 "use client";
+import { useTranslations } from "next-intl";
+import LocaleSwitcher from "@/components/i18n/LocaleSwitcher";
 import { siteConfig } from "@/config/site";
 import {
   Avatar,
@@ -14,11 +16,13 @@ import {
 } from "@nextui-org/react";
 import NextLink from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useState } from "react";
 import { MoreIcon, MoreOpenIcon } from "../icons";
 import { ThemeSwitch } from "./theme-switch";
-import { useState } from "react";
 
 export const MobileNavbar = ({ className }: { className: string }) => {
+  const t = useTranslations();
+  const controlsT = useTranslations("controls");
   const router = useRouter();
   const pathname = usePathname();
   const itemActiveClass = (path: string): object => {
@@ -41,6 +45,7 @@ export const MobileNavbar = ({ className }: { className: string }) => {
       </NavbarContent>
 
       <NavbarContent className="lg:hidden basis-1 pl-4 flex gap-1" justify="end">
+        <LocaleSwitcher showLabel={false} />
         <ThemeSwitch />
         <Dropdown
           backdrop="opaque"
@@ -54,10 +59,10 @@ export const MobileNavbar = ({ className }: { className: string }) => {
               {dropIsOpen ? <MoreOpenIcon /> : <MoreIcon />}
             </Button>
           </DropdownTrigger>
-          <DropdownMenu aria-label="Dynamic Actions" items={siteConfig.sidebar.navItems} variant="flat">
+          <DropdownMenu aria-label={controlsT("navigationMenu")} items={siteConfig.sidebar.navItems} variant="flat">
             {(item) => (
               <DropdownItem
-                key={item.label.toLowerCase()}
+                key={item.label}
                 onClick={() => {
                   router.push(item.href);
                 }}
@@ -68,7 +73,7 @@ export const MobileNavbar = ({ className }: { className: string }) => {
                   {(item.href !== "/" ? pathname.startsWith(item.href) : pathname === item.href)
                     ? item.solidIcon
                     : item.outlineIcon}
-                  <span className="font-semibold dark:text-neutral-300">{item.label}</span>
+                  <span className="font-semibold dark:text-neutral-300">{t(item.label)}</span>
                 </div>
               </DropdownItem>
             )}

@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -193,11 +194,11 @@ function WorkScene() {
         </div>
       </motion.div>
       <motion.span
-        className="absolute bottom-4 right-5 text-lg font-semibold text-emerald-600 dark:text-emerald-300"
+        className="absolute right-8 top-7 text-lg font-semibold text-emerald-600 dark:text-emerald-300"
         animate={{ opacity: [0.25, 1, 0.25] }}
-        transition={{ duration: 1.2, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 1.2, repeat: Infinity, ease: "easeOut" }}
       >
-        {'< />'}
+        Z
       </motion.span>
     </div>
   );
@@ -246,20 +247,20 @@ function ActivityScene({ mode }: { mode: ActivityMode }) {
 
 export const activityCopy: Record<ActivityMode, { label: string; note: string }> = {
   sleep: {
-    label: "sleeping",
-    note: "00:00-08:00",
+    label: "time.activities.sleeping",
+    note: "time.notes.sleeping",
   },
   eat: {
-    label: "eating",
-    note: "12:00-13:00 / 18:00-19:00",
+    label: "time.activities.eating",
+    note: "time.notes.eating",
   },
   work: {
-    label: "working",
-    note: "10:00-12:00 / 13:00-18:00 / 19:00-21:00",
+    label: "time.activities.working",
+    note: "time.notes.working",
   },
   play: {
-    label: "playing",
-    note: "all other hours",
+    label: "time.activities.playing",
+    note: "time.notes.playing",
   },
 };
 
@@ -270,6 +271,7 @@ export function CurrentStatusTitle({
   timeZone: string;
   forceMode?: ActivityMode;
 }) {
+  const t = useTranslations("about");
   const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
@@ -283,7 +285,7 @@ export function CurrentStatusTitle({
   const hour = getLocalHour(now, timeZone);
   const mode = forceMode ?? getActivityMode(hour);
 
-  return <>{`Currently ${activityCopy[mode].label}`}</>;
+  return <>{`${t("time.currently")} ${t(activityCopy[mode].label)}`}</>;
 }
 
 export default function LocalTimeStatusCard({
@@ -295,6 +297,7 @@ export default function LocalTimeStatusCard({
   locationLabel: string;
   forceMode?: ActivityMode;
 }) {
+  const t = useTranslations("about");
   const [now, setNow] = useState(() => new Date());
 
   useEffect(() => {
@@ -317,11 +320,11 @@ export default function LocalTimeStatusCard({
           <div className="text-3xl font-semibold text-neutral-900 dark:text-neutral-50 sm:text-4xl" suppressHydrationWarning>
             {time}{" "}
             <span className="block text-base font-medium text-neutral-500 dark:text-neutral-400 sm:inline">
-              in {locationLabel}
+              {t("time.in", { location: locationLabel })}
             </span>
           </div>
           <p className="text-sm text-neutral-600 dark:text-neutral-300">
-            Currently <span className="font-semibold text-primary">{currentActivity.label}</span>.
+            {t("time.currently")} <span className="font-semibold text-primary">{t(currentActivity.label)}</span>.
           </p>
         </div>
         <div className="h-40 w-full rounded-[1.5rem] border border-white/60 bg-white/60 p-2 dark:border-white/10 dark:bg-white/5">

@@ -4,18 +4,33 @@ import notFoundIcon from "@/public/lottie/not-found.json";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import dynamic from "next/dynamic";
+import { useTranslations } from "next-intl";
 
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 export default function NotFoundPage({ pathname }: { pathname?: string }) {
+  const t = useTranslations("errors");
+  const navT = useTranslations("navigation");
+
+  const pageLabel = pathname
+    ? pathname === "project"
+      ? navT("project")
+      : pathname === "about"
+      ? navT("about")
+      : pathname === "contact"
+      ? navT("contact")
+      : pathname === "website"
+      ? navT("website")
+      : navT("home")
+    : navT("home");
+
   return (
     <section className="flex flex-col md:flex-row md:mx-0 mx-5 items-center justify-center mt-10">
       <Lottie animationData={notFoundIcon} className="md:w-2/3" />
       <div className="flex flex-col gap-3 md:w-1/3">
-        <span className="font-bold text-4xl animate-slide-in-to-up-500">Oops!</span>
+        <span className="font-bold text-4xl animate-slide-in-to-up-500">{t("oops")}</span>
         <span className="pathname-neutral-500 pathname-lg animate-slide-in-to-up-1000">
-          Website can&apos;t seem to find the <p className="font-bold inline-block">{pathname ? pathname : "page"}</p> you are
-          looking for.
+          {t("notFoundTitle")} <p className="font-bold inline-block">{pathname ? pageLabel : navT("home")}</p> {t("lookingFor")}
         </span>
         <Button
           as={Link}
@@ -26,7 +41,7 @@ export default function NotFoundPage({ pathname }: { pathname?: string }) {
           }
           className="group/icon font-bold mt-6 animate-slide-in-to-up-1500"
         >
-          Take Me {pathname ? pathname.charAt(0).toUpperCase() + pathname.slice(1) : "Home"}
+          {t("takeMePrefix")} {pathname ? pageLabel : navT("home")}
         </Button>
       </div>
     </section>

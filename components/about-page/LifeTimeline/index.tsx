@@ -4,8 +4,11 @@ import { Timeline, TimelineHeader, TimelineIcon, TimelineItem, Typography } from
 import { BornIcon, FutureIcon, HellobikeIcon, UniversityIcon } from "../../icons";
 import TimelineConnector from "./TimelineConnector";
 import { siteConfig } from "@/config/site";
+import { useTranslations } from "next-intl";
 
 export default function LifeTimeline() {
+  const t = useTranslations("about");
+
   return (
     <div className="mt-1 items-center text-neutral-700 dark:text-neutral-200">
       <Timeline>
@@ -17,10 +20,10 @@ export default function LifeTimeline() {
             </TimelineIcon>
             <div className="flex flex-col gap-1">
               <Typography variant="h6" color="blue-gray">
-                Born in Guizhou, China
+                {t("timeline.born")}
               </Typography>
               <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
-                October 2001
+                {t("timeline.timeRange")}
               </Typography>
             </div>
           </TimelineHeader>
@@ -33,13 +36,16 @@ export default function LifeTimeline() {
             </TimelineIcon>
             <div className="flex flex-col gap-1">
               <Typography variant="h6" color="blue-gray">
-                University in{" "}
-                <AnimateLink href={siteConfig.links.wit} isExternal={true} className="text-primary">
-                  WIT
-                </AnimateLink>
+                {t.rich("timeline.university", {
+                  link: (chunks) => (
+                    <AnimateLink href={siteConfig.links.wit} isExternal={true} className="text-primary">
+                      {chunks}
+                    </AnimateLink>
+                  ),
+                })}
               </Typography>
               <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
-                September 2020 — June 2024
+                {t("timeline.universityTime")}
               </Typography>
             </div>
           </TimelineHeader>
@@ -52,13 +58,16 @@ export default function LifeTimeline() {
             </TimelineIcon>
             <div className="flex flex-col gap-1">
               <Typography variant="h6" color="blue-gray">
-                Back-end dev in{" "}
-                <AnimateLink href={siteConfig.links.hellobike} isExternal={true} className="text-primary">
-                  Hellobike
-                </AnimateLink>
+                {t.rich("timeline.hellobike", {
+                  link: (chunks) => (
+                    <AnimateLink href={siteConfig.links.hellobike} isExternal={true} className="text-primary">
+                      {chunks}
+                    </AnimateLink>
+                  ),
+                })}
               </Typography>
               <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
-                July 2024 — Present
+                {t("timeline.hellobikeTime")}
               </Typography>
             </div>
             <AnimatePing color="primary" size="3" className="flex ml-[12px]" />
@@ -71,10 +80,10 @@ export default function LifeTimeline() {
             </TimelineIcon>
             <div className="flex flex-col gap-1">
               <Typography variant="h6" color="blue-gray">
-                Unknowns and Expectations
+                {t("timeline.future")}
               </Typography>
               <Typography variant="small" color="gray" className="font-normal dark:text-neutral-400">
-                Coming soon...
+                {t("timeline.futureTime")}
               </Typography>
             </div>
           </TimelineHeader>

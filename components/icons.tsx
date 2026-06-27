@@ -118,6 +118,14 @@ export const MoreOpenIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   );
 };
 
+export const LanguagesIcon: React.FC<IconSvgProps> = ({ ...props }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" {...props}>
+      <path d="M12.87 15.07l-2.54-2.59.03-.03A17.52 17.52 0 0013.07 7H16V5h-7V3H7v2H0v2h11.17A15.77 15.77 0 019 10.56 15.77 15.77 0 016.83 7H4.76A17.48 17.48 0 007.67 12.44l-5.09 5.04L4 18.9 9 13.9l3.11 3.11.76-1.94zM17.5 10h-2L11 22h2l1.12-3h4.75L20 22h2l-4.5-12zm-2.61 7l1.98-5.33L18.86 17h-3.97z" />
+    </svg>
+  );
+};
+
 export const BornIcon: React.FC<IconSvgProps> = ({ ...props }) => {
   return (
     <svg
