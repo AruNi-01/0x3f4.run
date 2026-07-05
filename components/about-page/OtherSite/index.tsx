@@ -23,7 +23,7 @@ export default function OtherSite() {
     >
       <div className="flex items-center gap-2 mb-3 text-lg font-semibold text-gray-900 dark:text-neutral-400">
         <Lottie animationData={infinity} lottieRef={infinityRef} style={{ width: 32, height: 32 }} />
-        {t("otherSites.title")}
+        {t("about.otherSites.title")}
       </div>
       <ul className="my-4 space-y-3">
         {otherSites.map((site) => (
