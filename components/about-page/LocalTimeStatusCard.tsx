@@ -30,7 +30,15 @@ export function getLocalHour(date: Date, timeZone: string) {
   );
 }
 
-export function getActivityMode(hour: number): ActivityMode {
+export function isLocalWeekend(date: Date, timeZone: string): boolean {
+  const weekday = new Intl.DateTimeFormat("en-US", {
+    timeZone,
+    weekday: "long",
+  }).format(date);
+  return weekday === "Saturday" || weekday === "Sunday";
+}
+
+export function getActivityMode(hour: number, isWeekend: boolean = false): ActivityMode {
   if (hour >= 0 && hour < 8) {
     return "sleep";
   }
@@ -39,7 +47,7 @@ export function getActivityMode(hour: number): ActivityMode {
     return "eat";
   }
 
-  if ((hour >= 10 && hour < 12) || (hour >= 13 && hour < 18) || (hour >= 19 && hour < 21)) {
+  if (!isWeekend && ((hour >= 10 && hour < 12) || (hour >= 13 && hour < 18) || (hour >= 19 && hour < 21))) {
     return "work";
   }
 
@@ -283,7 +291,8 @@ export function CurrentStatusTitle({
   }, []);
 
   const hour = getLocalHour(now, timeZone);
-  const mode = forceMode ?? getActivityMode(hour);
+  const isWeekend = isLocalWeekend(now, timeZone);
+  const mode = forceMode ?? getActivityMode(hour, isWeekend);
 
   return <>{`${t("time.currently")} ${t(activityCopy[mode].label)}`}</>;
 }
@@ -309,7 +318,8 @@ export default function LocalTimeStatusCard({
   }, []);
 
   const hour = getLocalHour(now, timeZone);
-  const mode = forceMode ?? getActivityMode(hour);
+  const isWeekend = isLocalWeekend(now, timeZone);
+  const mode = forceMode ?? getActivityMode(hour, isWeekend);
   const time = getLocalTime(now, timeZone);
   const currentActivity = activityCopy[mode];
 
